@@ -7,8 +7,6 @@ public class Karpador extends Pokemon {
         this.attacks.add(new Attack("Splash", 0, 0, "Fire"));
     }
 
-
-
     String getType() {
         return "Water";
     }
