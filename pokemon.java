@@ -4,4 +4,3 @@ public class pokemon {
     private int energy;
     private String firstAttack;
 }
-
