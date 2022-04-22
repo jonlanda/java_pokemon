@@ -1,5 +1,5 @@
 package java_pokemon;
 
 public class absol {
-    pokemon absol = new pokemon("Absol", 45, 1);
+    pokemon absol = new pokemon("Absol", 45, 1, "Dark");
 }
