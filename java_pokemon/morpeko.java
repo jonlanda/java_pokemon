@@ -13,6 +13,4 @@ public class Morpeko extends Pokemon {
     String getType() {
         return "Electric";
     }
-
-    
 }
