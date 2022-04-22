@@ -1,12 +1,12 @@
 package java_pokemon;
 
-public class attack {
+public class Attack {
     private String attackName;
     private int dmg;
     private int energycost;
     private String effective;
 
-    public attack(String attackName, int dmg, int energycost, String effective) {
+    public Attack(String attackName, int dmg, int energycost, String effective) {
         this.attackName = attackName;
         this.dmg = dmg;
         this.energycost = energycost;

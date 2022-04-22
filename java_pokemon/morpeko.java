@@ -1,8 +1,18 @@
 package java_pokemon;
 
-public class morpeko extends pokemon {
-    pokemon morpeko = new pokemon("Morpeko", 35, 1, "Electric");
-    attack attack1 = new attack("Famished", 0, -1, "Water");
-    attack attack2 = new attack("Spark", 10, 2, "Water");
-    attack attack3 = new attack("Aura Wheel", 17, 4, "Water");
+public class Morpeko extends Pokemon {
+
+    public Morpeko(String name, int health, int energy, int level) {
+        super(name, health, energy, level);
+
+        this.attacks.add(new Attack("Quick Attack", 5, 0, "Ghost"));
+        this.attacks.add(new Attack("Night Slash", 5, 0, "Ghost"));
+        this.attacks.add(new Attack("Dark Pulse", 5, 0, "Ghost"));
+    }
+
+    String getType() {
+        return "Electric";
+    }
+
+    
 }
