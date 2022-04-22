@@ -6,8 +6,8 @@ public class Morpeko extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Famished", 0, 0, "Water"));
-        this.attacks.add(new Attack("Spark", 10, 2, "Water"));
-        this.attacks.add(new Attack("Aura Wheel", 12, 4, "Water"));
+        this.attacks.add(new Attack("Spark", 9, 2, "Water"));
+        this.attacks.add(new Attack("Aura Wheel", 14, 4, "Water"));
     }
 
     String getType() {
