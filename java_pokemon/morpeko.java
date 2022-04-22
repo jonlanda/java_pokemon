@@ -5,14 +5,12 @@ public class Morpeko extends Pokemon {
     public Morpeko(String name, int health, int energy, int level) {
         super(name, health, energy, level);
 
-        this.attacks.add(new Attack("Quick Attack", 5, 0, "Ghost"));
-        this.attacks.add(new Attack("Night Slash", 5, 0, "Ghost"));
-        this.attacks.add(new Attack("Dark Pulse", 5, 0, "Ghost"));
+        this.attacks.add(new Attack("Famished", 0, 0, "Water"));
+        this.attacks.add(new Attack("Spark", 10, 2, "Water"));
+        this.attacks.add(new Attack("Aura Wheel", 12, 4, "Water"));
     }
 
     String getType() {
         return "Electric";
     }
-
-    
 }
