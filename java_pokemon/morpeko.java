@@ -1,6 +1,6 @@
 package java_pokemon;
 
-public class morpeko {
+public class morpeko extends pokemon {
     pokemon morpeko = new pokemon("Morpeko", 35, 1, "Electric");
     attack attack1 = new attack("Famished", 0, -1, "Water");
     attack attack2 = new attack("Spark", 10, 2, "Water");
