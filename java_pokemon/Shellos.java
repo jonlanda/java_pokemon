@@ -5,9 +5,9 @@ public class Shellos extends Pokemon {
     public Shellos(String name, int health, int energy, int level) {
         super(name, health, energy, level);
 
-        this.attacks.add(new Attack("Nuzzle", 5, 0, "Water"));
-        this.attacks.add(new Attack("Thunder Shock", 5, 0, "Water"));
-        this.attacks.add(new Attack("Wild Charge", 5, 0, "Water"));
+        this.attacks.add(new Attack("Tackle", 5, 0, "Fire"));
+        this.attacks.add(new Attack("Water Pulse", 8, 0, "Fire"));
+        this.attacks.add(new Attack("Hydro Pump", 13, 0, "Fire"));
     }
 
     String getType() {
