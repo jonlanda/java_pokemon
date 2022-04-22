@@ -10,8 +10,6 @@ public class Absol extends Pokemon {
         this.attacks.add(new Attack("Dark Pulse", 5, 0, "Ghost"));
     }
 
-
-
     String getType() {
         return "Dark";
     }
