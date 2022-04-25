@@ -1,4 +1,5 @@
 package java_pokemon;
+
 import java.util.Scanner;
 
 public class selectPlace {
