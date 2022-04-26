@@ -29,6 +29,10 @@ public abstract class Pokemon {
         return this.energy;
     }
 
+    ArrayList getAttacks() {
+        return this.attacks;
+    }
+
     abstract String getType();
 
     public boolean attack(int number, Pokemon enemy) {

@@ -37,6 +37,6 @@ public class menu {
     }
 
     public static void showAttacks(Pokemon yourPokemon) {
-        System.out.println(yourPokemon.attack(1, ));
+        System.out.println("Your Attacks are: " + yourPokemon.getAttacks());
     }
 }
