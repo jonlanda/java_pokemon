@@ -14,7 +14,7 @@ public abstract class Pokemon {
         this.health = health;
         this.energy = energy;
         this.level = level;
-        this.attacks = new ArrayList<>();;
+        this.attacks = new ArrayList<Attack>();
     }
 
     String getName() {
@@ -35,7 +35,7 @@ public abstract class Pokemon {
         Attack attack = attacks.get(number);
         int energycost = attack.getEnergycost();
 
-        if(energy < energycost) {
+        if (energy < energycost) {
             return false;
         } else {
             enemy.health -= attack.getDmg();
