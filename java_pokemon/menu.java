@@ -1,10 +1,11 @@
 package java_pokemon;
+
 import java.util.Scanner;
 
 public class menu {
     public static void main(String[] args) {
-        System.out.println("Welcome to Pokémon-Java");
-        Pokemon p1 = new Absol("Absol", 100 , 2, 4);
+        System.out.println("Welcome to Pokémon-Java.");
+        Pokemon p1 = new Absol("Absol", 100, 2, 4);
         Pokemon p2 = new Morpeko("Morpeko", 100, 2, 2);
 
         System.out.println(p2.getHealth());
@@ -37,6 +38,12 @@ public class menu {
     }
 
     public static void showAttacks(Pokemon yourPokemon) {
-        System.out.println(yourPokemon.attack(1, ));
+        System.out.println(" Here the list of its attacks: \n");
+        for (Attack attack : yourPokemon.attacks) {
+            System.out.print("  " + attack.getAttackName());
+            System.out.print("  deals " + attack.getDmg() + " damage,");
+            System.out.print("  costs " + attack.getEnergycost() + " energy and");
+            System.out.println(" is effective against " + attack.getEffective());
+        }
     }
 }
