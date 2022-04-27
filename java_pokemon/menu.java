@@ -12,6 +12,7 @@ public class menu {
         p1.attack(1, p2);
         System.out.println(p2.getHealth());
         getStarter();
+        selectPlace();
     }
 
     public static void getStarter() {
@@ -45,5 +46,78 @@ public class menu {
             System.out.print("  costs " + attack.getEnergycost() + " energy and");
             System.out.println(" is effective against " + attack.getEffective());
         }
+    }
+
+    public static String getMap2() {
+        String map = "+---------------------------------------------------------------------------------------+ \n" +
+        "|Pongia-Map| 		                             					| \n" +
+        "+----------+ 						+---------+			| \n" +
+        "|	     						|   (P)   |			| \n" +
+        "|	     			   +-----------+	|    	  |			| \n" +
+        "| +-------+ 			   |'''''''''''| 	| Pongia  |			| \n" +
+        "| |^^^^^^^|			   |'''''''''''|	| Village |			| \n" +
+        "| |  (L)  |			   |'''''''''''|	|	  |			| \n" +
+        "| | Lunar |		+----------+'''''''''''|	+---------+			| \n" +
+        "| | Peak  |		|'''''''''(G)''''''''''|					| \n" +
+        "| |^^^^^^^|		|   Grassy-Grassland   |		       +-------------+	| \n" +
+        "| |^^^^^^^|		|''''''''''''''''''''''|		       |	     |	| \n" +
+        "| |^^^^^^^|		+----------------------+		       |  	     |	| \n" +
+        "| |^^^^^^^|							+------+	     |	| \n" +
+        "| |^^^^^^^|							|		     |	| \n" +
+        "| |^^^^^^^|			    +--------+			|	  (F)	     |	| \n" +
+        "| |^^^^^^^+---------+		    |~~~~~~~~|			|     Foggy-Forest   |	| \n" +
+        "| |^^^^^^^^^+------+|		+---+~~~~~~~~|			|		     |	| \n" +
+        "| |^^^^^^^^^|  (D) ||		|~~~~~~~~~~~~+---------+	|		     |	| \n" +
+        "| |^^^^^^^^^|Durkir||		|~~~~~~~~(L)~~~~~~~~~~~|	|		     |	| \n" +
+        "| |^^^^^^^^^| Cave ||	     +--+   Loungie-Lake       |	+--------------------+	| \n" +
+        "| |^^^^^^^^^+------+|	     |~~~~~~~~~~~~~~~~~~~~~~~~~|			        | \n" +
+        "| +-----------------+	     +-------------------------+				| \n" +
+        "+---------------------------------------------------------------------------------------+ \n";
+
+        return(map);
+    }
+
+    public static void selectPlace() {
+        Scanner placeW = new Scanner(System.in);
+        System.out.println(getMap2());
+        System.out.println("Where do you want to go?");
+        String ortWahl = placeW.nextLine();
+        switch (ortWahl.toUpperCase()) {
+            case "L":
+                spawnMountain();
+                break;
+            case "D":
+                spawnCave();
+                break;
+            case "G":
+                spawnGras();
+                break;
+            case "F":
+                spawnForest();
+                break;
+            case "T":
+                spawnLake();
+                break;
+        }
+    }
+
+    public static void spawnMountain() {
+
+    }
+
+    public static void spawnCave() {
+
+    }
+
+    public static void spawnGras() {
+
+    }
+
+    public static void spawnForest() {
+
+    }
+
+    public static void spawnLake() {
+
     }
 }
