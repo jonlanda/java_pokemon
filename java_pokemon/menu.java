@@ -131,9 +131,16 @@ public class menu {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Absol("Absol", 40, 2, 1);
+            spawnedPokemon = new Absol("Absol", 80, 2, 1);
+        } else if (starternumb == 6  || starternumb == 7) {
+            spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
+        } else if (starternumb >= 8  || starternumb <= 12) {
+            spawnedPokemon = new Zorua("Zorua", 35, 2, 1);
+        } else if (starternumb >= 13 || starternumb <= 20) {
+            spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
         }
-    }
+
+        System.out.println("You encountered a wild " + spawnedPokemon.getName());
 
     public static void spawnGras() {
         int max = 20;
