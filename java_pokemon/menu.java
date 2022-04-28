@@ -50,31 +50,31 @@ public class menu {
 
     public static String getMap2() {
         String map = "+---------------------------------------------------------------------------------------+ \n" +
-        "|Pongia-Map| 		                             					| \n" +
-        "+----------+ 						+---------+			| \n" +
-        "|	     						|   (P)   |			| \n" +
-        "|	     			   +-----------+	|    	  |			| \n" +
-        "| +-------+ 			   |'''''''''''| 	| Pongia  |			| \n" +
-        "| |^^^^^^^|			   |'''''''''''|	| Village |			| \n" +
-        "| |  (L)  |			   |'''''''''''|	|	  |			| \n" +
-        "| | Lunar |		+----------+'''''''''''|	+---------+			| \n" +
-        "| | Peak  |		|'''''''''(G)''''''''''|					| \n" +
-        "| |^^^^^^^|		|   Grassy-Grassland   |		       +-------------+	| \n" +
-        "| |^^^^^^^|		|''''''''''''''''''''''|		       |	     |	| \n" +
-        "| |^^^^^^^|		+----------------------+		       |  	     |	| \n" +
-        "| |^^^^^^^|							+------+	     |	| \n" +
-        "| |^^^^^^^|							|		     |	| \n" +
-        "| |^^^^^^^|			    +--------+			|	  (F)	     |	| \n" +
-        "| |^^^^^^^+---------+		    |~~~~~~~~|			|     Foggy-Forest   |	| \n" +
-        "| |^^^^^^^^^+------+|		+---+~~~~~~~~|			|		     |	| \n" +
-        "| |^^^^^^^^^|  (D) ||		|~~~~~~~~~~~~+---------+	|		     |	| \n" +
-        "| |^^^^^^^^^|Durkir||		|~~~~~~~~(L)~~~~~~~~~~~|	|		     |	| \n" +
-        "| |^^^^^^^^^| Cave ||	     +--+   Loungie-Lake       |	+--------------------+	| \n" +
-        "| |^^^^^^^^^+------+|	     |~~~~~~~~~~~~~~~~~~~~~~~~~|			        | \n" +
-        "| +-----------------+	     +-------------------------+				| \n" +
-        "+---------------------------------------------------------------------------------------+ \n";
+                "|Pongia-Map| 		                             					| \n" +
+                "+----------+ 						+---------+			| \n" +
+                "|	     						|   (P)   |			| \n" +
+                "|	     			   +-----------+	|    	  |			| \n" +
+                "| +-------+ 			   |'''''''''''| 	| Pongia  |			| \n" +
+                "| |^^^^^^^|			   |'''''''''''|	| Village |			| \n" +
+                "| |  (L)  |			   |'''''''''''|	|	  |			| \n" +
+                "| | Lunar |		+----------+'''''''''''|	+---------+			| \n" +
+                "| | Peak  |		|'''''''''(G)''''''''''|					| \n" +
+                "| |^^^^^^^|		|   Grassy-Grassland   |		       +-------------+	| \n" +
+                "| |^^^^^^^|		|''''''''''''''''''''''|		       |	     |	| \n" +
+                "| |^^^^^^^|		+----------------------+		       |  	     |	| \n" +
+                "| |^^^^^^^|							+------+	     |	| \n" +
+                "| |^^^^^^^|							|		     |	| \n" +
+                "| |^^^^^^^|			    +--------+			|	  (F)	     |	| \n" +
+                "| |^^^^^^^+---------+		    |~~~~~~~~|			|     Foggy-Forest   |	| \n" +
+                "| |^^^^^^^^^+------+|		+---+~~~~~~~~|			|		     |	| \n" +
+                "| |^^^^^^^^^|  (D) ||		|~~~~~~~~~~~~+---------+	|		     |	| \n" +
+                "| |^^^^^^^^^|Durkir||		|~~~~~~~~(L)~~~~~~~~~~~|	|		     |	| \n" +
+                "| |^^^^^^^^^| Cave ||	     +--+   Loungie-Lake       |	+--------------------+	| \n" +
+                "| |^^^^^^^^^+------+|	     |~~~~~~~~~~~~~~~~~~~~~~~~~|			        | \n" +
+                "| +-----------------+	     +-------------------------+				| \n" +
+                "+---------------------------------------------------------------------------------------+ \n";
 
-        return(map);
+        return (map);
     }
 
     public static void selectPlace() {
@@ -90,7 +90,7 @@ public class menu {
                 spawnCave();
                 break;
             case "G":
-                spawnGrass();
+                spawnGras();
                 break;
             case "F":
                 spawnForest();
@@ -131,19 +131,21 @@ public class menu {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Absol("Absol", 80, 2, 1);
-        } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
-            spawnedPokemon = new Zorua("Zorua", 35, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
-            spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
+            spawnedPokemon = new Absol("Absol", 40, 2, 1);
         }
-
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
     }
 
-    public static void spawnGrass() {
+    public static void spawnGras() {
+        int max = 20;
+        int min = 1;
+        int max1 = 12;
+        int min1 = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        if (starternumb <= 5) {
+            spawnedPokemon = new Zorua("Zorua", 80, 2, 1);
+        }
 
     }
 
