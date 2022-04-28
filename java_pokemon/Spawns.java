@@ -13,14 +13,14 @@ public class Spawns extends fight {
             spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
         } else if (starternumb == 7 || starternumb == 6) {
             spawnedPokemon = new Librava("Librava", 40, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Dedenne("Dedenne", 70, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Snom("Snom", 30, 2, 1);
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + spawnedPokemon.getName());
-        fighting(spawnedPokemon);
+        choosePokemon(spawnedPokemon);
     }
 
     public static void spawnCave() {
@@ -35,9 +35,9 @@ public class Spawns extends fight {
             spawnedPokemon = new Absol("Absol", 80, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
         }
 
@@ -56,9 +56,9 @@ public class Spawns extends fight {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Togedemaru("Togedemaru", 70, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Spoink("Spoink", 35, 2, 1);
         }
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
@@ -76,9 +76,9 @@ public class Spawns extends fight {
             spawnedPokemon = new Phantump("Phantump", 35, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Morelull("Morelull", 35, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Foongus("Foongus", 30, 2, 1);
         }
 
@@ -97,9 +97,9 @@ public class Spawns extends fight {
             spawnedPokemon = new Foongus("Foongus", 30, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Librava("Librava", 40, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
@@ -117,9 +117,9 @@ public class Spawns extends fight {
             spawnedPokemon = new Morpeko("Morpeko", 40, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Absol("Absol", 40, 2, 1);
-        } else if (starternumb >= 8 || starternumb <= 12) {
+        } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
-        } else if (starternumb >= 13 || starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
         }
 
