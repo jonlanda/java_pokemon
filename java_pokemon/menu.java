@@ -98,6 +98,9 @@ public class menu {
             case "T":
                 spawnLake();
                 break;
+            case "P":
+                spawnVillage();
+                break;
         }
     }
 
