@@ -102,7 +102,12 @@ public class menu {
     }
 
     public static void spawnMountain() {
-
+        int max = 20;
+        int min = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        if (starternumb <= 5) {
+            
+        }
     }
 
     public static void spawnCave() {
