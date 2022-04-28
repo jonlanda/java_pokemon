@@ -19,19 +19,19 @@ public class menu {
         int max = 4;
         int min = 1;
         int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        Pokemon yourPokemon = new Swablu("Swablu", 70, 2, 1);
+        Pokemon yourPokemon = new Swablu("Swablu", 30, 2, 1);
         switch (starternumb) {
             case 1:
-                yourPokemon = new Swablu("Swablu", 70, 2, 1);
+                yourPokemon = new Swablu("Swablu", 30, 2, 1);
                 break;
             case 2:
-                yourPokemon = new Shellos("Shellos", 70, 2, 1);
+                yourPokemon = new Shellos("Shellos", 30, 2, 1);
                 break;
             case 3:
-                yourPokemon = new Riolu("Riolu", 70, 2, 1);
+                yourPokemon = new Riolu("Riolu", 30, 2, 1);
                 break;
             case 4:
-                yourPokemon = new Cutiefly("Cutiefly", 70, 2, 1);
+                yourPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
                 break;
         }
         System.out.println("Your starter Pokémon is: " + yourPokemon.getName() + "\n");
@@ -102,11 +102,37 @@ public class menu {
     }
 
     public static void spawnMountain() {
+        int max = 20;
+        int min = 1;
+        int max1 = 12;
+        int min1 = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        if (starternumb <= 5) {
+            spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
+        } else if (starternumb == 7 || starternumb == 6) {
+            spawnedPokemon = new Librava("Librava", 40, 2, 1);
+        } else if (starternumb >= 8 || starternumb <= 12) {
+            spawnedPokemon = new Dedenne("Dedenne", 70, 2, 1);
+        } else if (starternumb >= 13 || starternumb <= 20) {
+            spawnedPokemon = new Snom("Snom", 30, 2, 1);
+        }
 
+        System.out.println("You encountered a wild " + spawnedPokemon.getName());
     }
 
     public static void spawnCave() {
-
+        int max = 20;
+        int min = 1;
+        int max1 = 12;
+        int min1 = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        if (starternumb <= 5) {
+            spawnedPokemon = new Absol("Absol", 80, 2, 1);
+        }
     }
 
     public static void spawnGras() {
