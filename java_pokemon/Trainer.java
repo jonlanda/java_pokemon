@@ -4,14 +4,12 @@ import java.util.ArrayList;
 
 public class Trainer {
 
-    public ArrayList<Pokemon> team;
+    public static ArrayList<Pokemon> team;
 
     public Trainer() {
-        
         this.team = new ArrayList<Pokemon>();
         this.team.add(getStarter());
-
-   }
+}
 
     public Pokemon getStarter() {
         int max = 4;
@@ -27,8 +25,5 @@ public class Trainer {
             default:
                 return new Zorua("Zorua", 40, 2, 1);
         }
-        //showAttacks(this.team.get(0));
     }
-
-    
 }
