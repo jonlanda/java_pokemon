@@ -20,6 +20,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        fighting(spawnedPokemon);
     }
 
     public static void spawnCave() {
