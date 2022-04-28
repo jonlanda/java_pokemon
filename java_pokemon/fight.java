@@ -1,5 +1,7 @@
 package java_pokemon;
 
-public class fight {
+import java.util.ArrayList;
+
+public class fight extends Trainer {
 
 }

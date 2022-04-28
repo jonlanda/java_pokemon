@@ -1,6 +1,6 @@
 package java_pokemon;
 
-public class Spawns extends Starter {
+public class Spawns extends fight {
     public static void spawnMountain() {
         int max = 20;
         int min = 1;

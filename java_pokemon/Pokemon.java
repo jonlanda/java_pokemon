@@ -45,4 +45,14 @@ public abstract class Pokemon {
 
     }
 
+    public void showAttacks() {
+        System.out.println(" Here the list of its attacks: \n");
+        for (Attack attack : this.attacks) {
+            System.out.print("  " + attack.getAttackName());
+            System.out.print("  deals " + attack.getDmg() + " damage,");
+            System.out.print("  costs " + attack.getEnergycost() + " energy and");
+            System.out.println(" is effective against " + attack.getEffective());
+        }
+    }
+
 }
