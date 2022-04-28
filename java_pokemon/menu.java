@@ -1,5 +1,6 @@
 package java_pokemon;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class menu {
@@ -16,6 +17,7 @@ public class menu {
     }
 
     public static void getStarter() {
+        ArrayList<Pokemon> teampokemon = new ArrayList<Pokemon>();
         int max = 4;
         int min = 1;
         int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
@@ -23,19 +25,23 @@ public class menu {
         switch (starternumb) {
             case 1:
                 yourPokemon = new Swablu("Swablu", 30, 2, 1);
+                teampokemon.add(yourPokemon);
                 break;
             case 2:
                 yourPokemon = new Shellos("Shellos", 30, 2, 1);
+                teampokemon.add(yourPokemon);
                 break;
             case 3:
                 yourPokemon = new Riolu("Riolu", 30, 2, 1);
+                teampokemon.add(yourPokemon);
                 break;
             case 4:
-                yourPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
+                yourPokemon = new Zorua("Zorua", 40, 2, 1);
+                teampokemon.add(yourPokemon);
                 break;
         }
         System.out.println("Your starter Pokémon is: " + yourPokemon.getName() + "\n");
-        showAttacks(yourPokemon);
+        showAttacks(teampokemon.get(0));
     }
 
     public static void showAttacks(Pokemon yourPokemon) {
@@ -135,7 +141,7 @@ public class menu {
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
         } else if (starternumb >= 8 || starternumb <= 12) {
-            spawnedPokemon = new Zorua("Zorua", 40, 2, 1);
+            spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb >= 13 || starternumb <= 20) {
             spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
         }
@@ -152,7 +158,7 @@ public class menu {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Zorua("Zorua", 40, 2, 1);
+            spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Togedemaru("Togedemaru", 70, 2, 1);
         } else if (starternumb >= 8 || starternumb <= 12) {
