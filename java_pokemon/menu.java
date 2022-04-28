@@ -133,7 +133,7 @@ public class menu {
         if (starternumb <= 5) {
             spawnedPokemon = new Absol("Absol", 80, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Drillbur("Drillbur", 40, 2, 1);
+            spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
         } else if (starternumb >= 8 || starternumb <= 12) {
             spawnedPokemon = new Zorua("Zorua", 35, 2, 1);
         } else if (starternumb >= 13 || starternumb <= 20) {
