@@ -34,7 +34,7 @@ public class menu {
                 yourPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
                 break;
         }
-        System.out.println("Your starter Pokémon is: " + yourPokemon.getName());
+        System.out.println("Your starter Pokémon is: " + yourPokemon.getName() + "\n");
         showAttacks(yourPokemon);
     }
 
