@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class Trainer {
 
-    public ArrayList<Pokemon> team;
+    public static ArrayList<Pokemon> team;
 
     public Trainer() {
+
 
         this.team = new ArrayList<Pokemon>();
         this.team.add(getStarter());
@@ -28,5 +29,4 @@ public class Trainer {
                 return new Zorua("Zorua", 40, 2, 1);
         }
     }
-
 }
