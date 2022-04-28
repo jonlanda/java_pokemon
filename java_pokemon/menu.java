@@ -164,7 +164,24 @@ public class menu {
     }
 
     public static void spawnForest() {
+        int max = 20;
+        int min = 1;
+        int max1 = 12;
+        int min1 = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        if (starternumb <= 5) {
+            spawnedPokemon = new Phantump("Phantump", 35, 2, 1);
+        } else if (starternumb == 6 || starternumb == 7) {
+            spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
+        } else if (starternumb >= 8 || starternumb <= 12) {
+            spawnedPokemon = new Morelull("Morelull", 35, 2, 1);
+        } else if (starternumb >= 13 || starternumb <= 20) {
+            spawnedPokemon = new Foongus("Foongus", 30, 2, 1);
+        }
 
+        System.out.println("You encountered a wild " + spawnedPokemon.getName());
     }
 
     public static void spawnLake() {
@@ -184,6 +201,27 @@ public class menu {
         } else if (starternumb >= 13 || starternumb <= 20) {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
+        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+    }
+
+    public static void spawnVillage() {
+        int max = 20;
+        int min = 1;
+        int max1 = 12;
+        int min1 = 1;
+        int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        if (starternumb <= 5) {
+            spawnedPokemon = new Morpeko("Morpeko", 80, 2, 1);
+        } else if (starternumb == 6 || starternumb == 7) {
+            spawnedPokemon = new Absol("Absol", 80, 2, 1);
+        } else if (starternumb >= 8 || starternumb <= 12) {
+            spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
+        } else if (starternumb >= 13 || starternumb <= 20) {
+            spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
+        }
+
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
     }
 }
