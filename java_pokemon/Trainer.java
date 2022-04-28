@@ -7,9 +7,12 @@ public class Trainer {
     public static ArrayList<Pokemon> team;
 
     public Trainer() {
+
+
         this.team = new ArrayList<Pokemon>();
         this.team.add(getStarter());
-}
+
+    }
 
     public Pokemon getStarter() {
         int max = 4;
