@@ -14,7 +14,6 @@ public class menu extends Spawns{
         System.out.println(p2.getHealth());
         Trainer me = new Trainer();
         System.out.println("Your starter Pokémon is: " + me.team.get(0).getName() + "\n");
-        me.team.get(0).showAttacks();
         selectPlace();
     }
 

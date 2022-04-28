@@ -19,7 +19,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Snom("Snom", 30, 2, 1);
         }
 
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + spawnedPokemon.getName());
         fighting(spawnedPokemon);
     }
 
