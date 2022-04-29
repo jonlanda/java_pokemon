@@ -109,7 +109,7 @@ public class fight extends Trainer {
         System.out.println(
                 "Do you want to catch the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " Y/N");
         String PkmC = myPkm.nextLine();
-        switch(PkmC) {
+        switch(PkmC.toUpperCase()) {
             case "Y":
                 if (team.size() >= 6) {
                     System.out.println("Sorry you cant add more Pokemons to your Team!");
