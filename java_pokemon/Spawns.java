@@ -128,6 +128,13 @@ public class Spawns extends fight {
         }
 
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
-        choosePokemon(spawnedPokemon);
+
+        Trainer me = new Trainer();
+        Fight2 fight = new Fight2(me, spawnedPokemon);
+        fight.choosePokemon();
+
+        while(!fight.turn()) {
+            System.out.println("Next turn");
+        }
     }
 }

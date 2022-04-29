@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public abstract class Pokemon {
     protected String name;
     public int health;
+    protected int maxHealth;
     protected int energy;
     protected int level;
     public ArrayList<Attack> attacks;
 
     public Pokemon(String name, int health, int energy, int level) {
         this.name = name;
+        this.maxHealth = health;
         this.health = health;
         this.energy = energy;
         this.level = level;
@@ -67,6 +69,10 @@ public abstract class Pokemon {
             enemy.health -= attack.getDmg();
             return true;
         }
+    }
+
+    public void heal() {
+        this.health = this.maxHealth;
     }
 
     public void showAttacks() {

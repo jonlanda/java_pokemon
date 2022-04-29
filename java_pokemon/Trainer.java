@@ -7,11 +7,8 @@ public class Trainer {
     public static ArrayList<Pokemon> team;
 
     public Trainer() {
-
-
-        this.team = new ArrayList<Pokemon>();
-        this.team.add(getStarter());
-
+        Trainer.team = new ArrayList<Pokemon>();
+        Trainer.team.add(getStarter());
     }
 
     public Pokemon getStarter() {
