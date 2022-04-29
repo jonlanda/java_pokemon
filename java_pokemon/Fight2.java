@@ -1,3 +1,4 @@
+/*
 package java_pokemon;
 
 import java.util.Scanner;
@@ -92,3 +93,4 @@ public class Fight2 {
         this.friendly = Trainer.team.get(choice);
     }
 }
+*/
