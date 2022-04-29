@@ -38,13 +38,13 @@ public abstract class Pokemon {
             if (energy < energycost) {
                 return false;
             } else {
+                System.out.println("It's super effective!\n");
                 enemy.health -= attack.getDmg() * 1.25;
                 energy -= energycost;
                 energy++;
                 return true;
             }
         } else {
-
             if (energy < energycost) {
                 return false;
             } else {
@@ -60,6 +60,7 @@ public abstract class Pokemon {
     public boolean atkEne(int number, Pokemon enemy) {
         Attack attack = attacks.get(number);
         if (attack.getEffective() == enemy.getType()) {
+            System.out.println("It's super effective!\n");
             enemy.health -= attack.getDmg() * 1.25;
             return true;
         } else {
