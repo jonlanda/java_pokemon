@@ -43,6 +43,7 @@ public class fight extends Trainer {
     }
 
     public static void fightIntro(Pokemon spawnedPokemon, int PkmW) {
+        System.out.println("\n\n---------------------------------------------------------------------------\n");
         System.out.println("\nYou are fighting the wild " + spawnedPokemon.getName());
         System.out.println(" It has " + spawnedPokemon.getHealth() + " Health\n");
         System.out.println("You have " + team.get(PkmW).getEnergy() + " Energy left!\n\n");
@@ -54,16 +55,23 @@ public class fight extends Trainer {
         int enemyAttack = (int) Math.floor(Math.random() * (max - min + 1) + min);
         if (enemyAttack <= 8) {
             spawnedPokemon.atkEne(0, team.get(PkmW));
-            System.out.println("The wild " + spawnedPokemon.getName() + " uses \n");
+            System.out.println("The wild " + spawnedPokemon.getName() + " uses "
+                    + spawnedPokemon.attacks.get(0).getAttackName() + " and deals "
+                    + spawnedPokemon.attacks.get(0).getDmg() + " damage! \n");
             System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
             attackYou(spawnedPokemon, PkmW);
         } else if (enemyAttack > 8 && enemyAttack <= 12) {
             spawnedPokemon.atkEne(1, team.get(PkmW));
-
+            System.out.println("The wild " + spawnedPokemon.getName() + " uses "
+                    + spawnedPokemon.attacks.get(1).getAttackName() + " and deals "
+                    + spawnedPokemon.attacks.get(1).getDmg() + " damage! \n");
             System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
             attackYou(spawnedPokemon, PkmW);
         } else {
             spawnedPokemon.atkEne(2, team.get(PkmW));
+            System.out.println("The wild " + spawnedPokemon.getName() + " uses "
+                    + spawnedPokemon.attacks.get(2).getAttackName() + " and deals "
+                    + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
             System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
             attackYou(spawnedPokemon, PkmW);
         }
