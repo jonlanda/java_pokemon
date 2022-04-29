@@ -34,22 +34,38 @@ public abstract class Pokemon {
     public boolean attack(int number, Pokemon enemy) {
         Attack attack = attacks.get(number);
         int energycost = attack.getEnergycost();
-
-        if (energy < energycost) {
-            return false;
+        if (attack.getEffective() == enemy.getType()) {
+            if (energy < energycost) {
+                return false;
+            } else {
+                enemy.health -= attack.getDmg() * 1.25;
+                energy -= energycost;
+                energy++;
+                return true;
+            }
         } else {
-            enemy.health -= attack.getDmg();
-            energy -= energycost;
-            energy++;
-            return true;
+
+            if (energy < energycost) {
+                return false;
+            } else {
+                enemy.health -= attack.getDmg();
+                energy -= energycost;
+                energy++;
+                return true;
+            }
         }
 
     }
 
     public boolean atkEne(int number, Pokemon enemy) {
         Attack attack = attacks.get(number);
-        enemy.health -= attack.getDmg();
-        return true;
+        if (attack.getEffective() == enemy.getType()) {
+            enemy.health -= attack.getDmg() * 1.25;
+            return true;
+        } else {
+            enemy.health -= attack.getDmg();
+            return true;
+        }
     }
 
     public void showAttacks() {
