@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class fight extends Trainer {
     public static void attackYou(Pokemon spawnedPokemon, int PkmW) {
-        fightIntro(spawnedPokemon);
+        fightIntro(spawnedPokemon, PkmW);
         Scanner myAtk = new Scanner(System.in);
 
         System.out.println("Your Attacks: ");
@@ -26,9 +26,10 @@ public class fight extends Trainer {
         }
     }
 
-    public static void fightIntro(Pokemon spawnedPokemon) {
+    public static void fightIntro(Pokemon spawnedPokemon, int PkmW) {
         System.out.println("\nYou are fighting the wild " + spawnedPokemon.getName());
-        System.out.println(" It has " + spawnedPokemon.getHealth() + " Health\n\n");
+        System.out.println(" It has " + spawnedPokemon.getHealth() + " Health\n");
+        System.out.println("You have " + team.get(PkmW).getEnergy() + " Energy left!\n\n");
     }
 
     public static void attackEnemy(Pokemon spawnedPokemon, int PkmW){
