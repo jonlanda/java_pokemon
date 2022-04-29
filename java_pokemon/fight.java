@@ -96,10 +96,10 @@ public class fight extends Trainer {
         Pokemon yourPokemon2 = spawnedPokemon;
         String PkmC = myPkm.nextLine();
         if (PkmC.toUpperCase() == "Y") {
-            team.add(yourPokemon2);
             menu.getMap2();
             menu.selectPlace();
         } else {
+            team.add(yourPokemon2);
             menu.getMap2();
             menu.selectPlace();
         }
