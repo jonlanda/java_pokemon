@@ -23,6 +23,7 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
+                    team.get(PkmW).getLevelUp();
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -32,6 +33,7 @@ public class fight extends Trainer {
                         + spawnedPokemon.getHealth()
                         + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
+                    team.get(PkmW).getLevelUp();
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -42,12 +44,10 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
+                    team.get(PkmW).getLevelUp();
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
-        }
-        if (spawnedPokemon.getHealth() <= 0) {
-            catchPokemon(spawnedPokemon, PkmW);
         }
     }
 

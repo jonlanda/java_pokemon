@@ -8,6 +8,10 @@ public abstract class Pokemon {
     protected int maxHealth;
     protected int energy;
     protected int level;
+    protected int nextLevel;
+    protected int nextHealth;
+    protected double nextDmg;
+    protected double nextEff;
     public ArrayList<Attack> attacks;
 
     public Pokemon(String name, int health, int energy, int level) {
@@ -16,6 +20,10 @@ public abstract class Pokemon {
         this.health = health;
         this.energy = energy;
         this.level = level;
+        this.nextLevel = level + 1;
+        this.nextHealth = health + 10;
+        this.nextDmg = 1;
+        this.nextEff = 1.25;
         this.attacks = new ArrayList<Attack>();
     }
 
@@ -31,6 +39,10 @@ public abstract class Pokemon {
         return this.energy;
     }
 
+    int getLevel() {
+        return this.level;
+    }
+
     abstract String getType();
 
     public boolean attack(int number, Pokemon enemy) {
@@ -41,7 +53,7 @@ public abstract class Pokemon {
                 return false;
             } else {
                 System.out.println(Colors.PURPLE + "\nIt's super effective!\n" + Colors.RESET);
-                enemy.health -= attack.getDmg() * 1.25;
+                enemy.health -= attack.getDmg() * nextEff;
                 energy -= energycost;
                 energy++;
                 return true;
@@ -50,7 +62,7 @@ public abstract class Pokemon {
             if (energy < energycost) {
                 return false;
             } else {
-                enemy.health -= attack.getDmg();
+                enemy.health -= attack.getDmg() * nextDmg;
                 energy -= energycost;
                 energy++;
                 return true;
@@ -75,13 +87,60 @@ public abstract class Pokemon {
         this.health = this.maxHealth;
     }
 
+    public void getLevelUp() {
+        if (this.level == 1) {
+            this.level = 2;
+            this.health = nextHealth;
+            level2up();
+        } else if (this.level == 2) {
+            this.level = 3;
+            this.health = nextHealth;
+            level3up();
+        } else if (this.level == 3) {
+            this.level = 4;
+            this.health = nextHealth;
+            level4up();
+        } else if (this.level == 4) {
+            evolution();
+        }
+    }
+
+
+    public void level2up() {
+        this.level = this.nextLevel;
+        this.health = this.nextHealth;
+        this.nextDmg = 1.25;
+        this.nextDmg = 1.5;
+        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 2");
+    }
+
+    public void level3up() {
+        this.level = this.nextLevel;
+        this.health = this.nextHealth;
+        this.nextDmg = 1.5;
+        this.nextDmg = 1.75;
+        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 3");
+    }
+
+    public void level4up() {
+        this.level = this.nextLevel;
+        this.health = this.nextHealth;
+        this.nextDmg = 1.75;
+        this.nextDmg = 2;
+        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 4");
+    }
+
+    public void evolution() {
+
+    }
+
     public void showAttacks() {
         System.out.println(" Here the list of its attacks: \n");
         int i = 0;
         for (Attack attack : this.attacks) {
             i++;
             System.out.print(i + ")  " + attack.getAttackName());
-            System.out.print("  deals " + Colors.RED + attack.getDmg() + Colors.RESET +" damage,");
+            System.out.print("  deals " + Colors.RED + attack.getDmg() * nextDmg + Colors.RESET +" damage,");
             System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET +" Energy and");
             System.out.println(" is effective against " + attack.getEffective());
         }
