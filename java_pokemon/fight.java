@@ -86,6 +86,7 @@ public class fight extends Trainer {
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
             System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
             diePokemon(PkmW, spawnedPokemon);
+
             attackYou(spawnedPokemon, PkmW);
         }
 
