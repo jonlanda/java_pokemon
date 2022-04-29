@@ -9,7 +9,7 @@ public class fight extends Trainer {
         Scanner myAtk = new Scanner(System.in);
 
         if (spawnedPokemon.getHealth() <= 0) {
-            catchPokemon(spawnedPokemon);
+            catchPokemon(spawnedPokemon, PkmW);
         }
 
         System.out.println("Your Attacks: ");
@@ -23,7 +23,7 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    catchPokemon(spawnedPokemon);
+                    catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
             case 2:
@@ -32,7 +32,7 @@ public class fight extends Trainer {
                         + spawnedPokemon.getHealth()
                         + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    catchPokemon(spawnedPokemon);
+                    catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
             case 3:
@@ -42,12 +42,12 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    catchPokemon(spawnedPokemon);
+                    catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
         }
         if (spawnedPokemon.getHealth() <= 0) {
-            catchPokemon(spawnedPokemon);
+            catchPokemon(spawnedPokemon, PkmW);
         }
     }
 
@@ -104,27 +104,28 @@ public class fight extends Trainer {
         attackYou(spawnedPokemon, PkmW);
     }
 
-    public static void catchPokemon(Pokemon spawnedPokemon) {
+    public static void catchPokemon(Pokemon spawnedPokemon, int PkmW) {
         Scanner myPkm = new Scanner(System.in);
         System.out.println(
                 "Do you want to catch the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " Y/N");
         String PkmC = myPkm.nextLine();
-        if (PkmC.toUpperCase() == "N") {
-            Champ.readyForChamp();
-            menu.getMap2();
-            menu.selectPlace();
-        } else if (PkmC.toUpperCase() == "Y"){
-            if (team.size() >= 6) {
-                System.out.println("Sorry you cant add more Pokemons to your Team!");
-            } else {
-                team.add(spawnedPokemon);
-                System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
-                for (int i = 0; i < team.size(); i++) {
-                    team.get(i).heal();
+        switch(PkmC) {
+            case "Y":
+                if (team.size() >= 6) {
+                    System.out.println("Sorry you cant add more Pokemons to your Team!");
+                } else {
+                    spawnedPokemon.heal();
+                    team.add(spawnedPokemon);
+                    System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
+                    team.get(PkmW).heal();
                 }
-            }
-            menu.getMap2();
-            menu.selectPlace();
+                Champ.readyForChamp();
+                menu.getMap2();
+                menu.selectPlace();
+            case "N":
+                Champ.readyForChamp();
+                menu.getMap2();
+                menu.selectPlace();
         }
     }
 
