@@ -40,6 +40,7 @@ public abstract class Pokemon {
         } else {
             enemy.health -= attack.getDmg();
             energy -= attack.getEnergycost();
+            energy++;
             return true;
         }
 
