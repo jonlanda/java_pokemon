@@ -40,7 +40,7 @@ public abstract class Pokemon {
             if (energy < energycost) {
                 return false;
             } else {
-                System.out.println("It's super effective!\n");
+                System.out.println(Colors.PURPLE + "\nIt's super effective!\n" + Colors.RESET);
                 enemy.health -= attack.getDmg() * 1.25;
                 energy -= energycost;
                 energy++;
@@ -81,8 +81,8 @@ public abstract class Pokemon {
         for (Attack attack : this.attacks) {
             i++;
             System.out.print(i + ")  " + attack.getAttackName());
-            System.out.print("  deals " + attack.getDmg() + " damage,");
-            System.out.print("  costs " + attack.getEnergycost() + " energy and");
+            System.out.print("  deals " + Colors.RED + attack.getDmg() + Colors.RESET +" damage,");
+            System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET +" Energy and");
             System.out.println(" is effective against " + attack.getEffective());
         }
     }
