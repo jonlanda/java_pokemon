@@ -7,25 +7,38 @@ public class fight extends Trainer {
         fightIntro(spawnedPokemon, PkmW);
         Scanner myAtk = new Scanner(System.in);
 
+        if (spawnedPokemon.getHealth() <= 0) {
+            catchPokemon(spawnedPokemon);
+        }
+
         System.out.println("Your Attacks: ");
         team.get(PkmW).showAttacks();
         int AtkW = myAtk.nextInt();
         switch (AtkW) {
             case 1:
                 team.get(PkmW).attack(0, spawnedPokemon);
-                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth()
-                        + " Health left!\n");
+                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth() + " Health left!\n");
+                        if (spawnedPokemon.getHealth() <= 0) {
+                            catchPokemon(spawnedPokemon);
+                        }
                 attackEnemy(spawnedPokemon, PkmW);
             case 2:
                 team.get(PkmW).attack(1, spawnedPokemon);
-                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth()
-                        + " Health left!\n");
+                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth() + " Health left!\n");
+                        if (spawnedPokemon.getHealth() <= 0) {
+                            catchPokemon(spawnedPokemon);
+                        }
                 attackEnemy(spawnedPokemon, PkmW);
             case 3:
                 team.get(PkmW).attack(2, spawnedPokemon);
-                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth()
-                        + " Health left!\n");
+                System.out.println("The wild " + spawnedPokemon.getName() + " has " + spawnedPokemon.getHealth() + " Health left!\n");
+                if (spawnedPokemon.getHealth() <= 0) {
+                    catchPokemon(spawnedPokemon);
+                }
                 attackEnemy(spawnedPokemon, PkmW);
+        }
+        if (spawnedPokemon.getHealth() <= 0) {
+            catchPokemon(spawnedPokemon);
         }
     }
 
@@ -75,6 +88,20 @@ public class fight extends Trainer {
         }
         int PkmW = myPkm.nextInt() - 1;
         attackYou(spawnedPokemon, PkmW);
+    }
+
+    public static void catchPokemon(Pokemon spawnedPokemon) {
+        Scanner myPkm = new Scanner(System.in);
+        System.out.println("Do you want to catch the wild " + spawnedPokemon.getName() + " Y/N");
+        String PkmC = myPkm.nextLine();
+        if (PkmC.toUpperCase() == "Y") {
+            team.add(spawnedPokemon);
+            menu.getMap2();
+            menu.selectPlace();
+        } else {
+            menu.getMap2();
+            menu.selectPlace();
+        }
     }
 }
 
