@@ -55,7 +55,8 @@ public class fight extends Trainer {
         System.out.println("\n\n---------------------------------------------------------------------------\n");
         System.out.println("\nYou are fighting the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         System.out.println(" It has " + spawnedPokemon.getHealth() + " Health\n");
-        System.out.println("You have " + team.get(PkmW).getEnergy() + " Energy left!\n\n");
+        System.out.println("You have " + Colors.YELLOW + team.get(PkmW).getEnergy() + Colors.RESET +" Energy left!\n");
+        System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + Colors.RESET + " has " + Colors.GREEN + team.get(PkmW).getHealth() + Colors.RESET + " Health left!\n\n");
     }
 
     public static void attackEnemy(Pokemon spawnedPokemon, int PkmW) {
@@ -67,21 +68,24 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(0).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(0).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has "+ Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            diePokemon(PkmW, spawnedPokemon);
             attackYou(spawnedPokemon, PkmW);
         } else if (enemyAttack > 8 && enemyAttack <= 12) {
             spawnedPokemon.atkEne(1, team.get(PkmW));
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(1).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(1).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has "+ Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            diePokemon(PkmW, spawnedPokemon);
             attackYou(spawnedPokemon, PkmW);
         } else {
             spawnedPokemon.atkEne(2, team.get(PkmW));
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(2).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            diePokemon(PkmW, spawnedPokemon);
             attackYou(spawnedPokemon, PkmW);
         }
 
@@ -108,13 +112,33 @@ public class fight extends Trainer {
             menu.getMap2();
             menu.selectPlace();
         } else {
-            team.add(spawnedPokemon);
-            System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
-            for (int i = 0; i < team.size(); i++) {
-                team.get(i).heal();
+            if (team.size() >= 6) {
+                System.out.println("Sorry you cant add more Pokemons to your Team!");
+            } else {
+                team.add(spawnedPokemon);
+                System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
+                for (int i = 0; i < team.size(); i++) {
+                    team.get(i).heal();
+                }
             }
             menu.getMap2();
             menu.selectPlace();
+        }
+    }
+
+    public static void diePokemon(int PkmW, Pokemon spawnedPokemon) {
+    if (team.get(PkmW).getHealth() <= 0) {
+        System.out.println("Oh no your " + team.get(PkmW).getName() + " fainted!");
+        team.remove(PkmW);
+        dieTeam();
+        choosePokemon(spawnedPokemon);
+    }
+    }
+
+    public static void dieTeam() {
+        if (team.size() == 0) {
+            System.out.println("Seems like your entire Team fainted!\nSee you on the next try!");
+            System.exit(0);
         }
     }
 }
