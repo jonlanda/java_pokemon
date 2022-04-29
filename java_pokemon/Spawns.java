@@ -19,7 +19,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Snom("Snom", 30, 2, 1);
         }
 
-        System.out.println("\n\n\n\nYou encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 
@@ -41,7 +41,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
         }
 
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 
@@ -62,7 +62,7 @@ public class Spawns extends fight {
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Spoink("Spoink", 35, 2, 1);
         }
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 
@@ -84,7 +84,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Foongus("Foongus", 30, 2, 1);
         }
 
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 
@@ -105,7 +105,7 @@ public class Spawns extends fight {
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 
@@ -127,7 +127,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
         }
 
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
     }
 }
