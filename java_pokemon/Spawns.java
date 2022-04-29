@@ -126,17 +126,18 @@ public class Spawns extends fight {
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
         }
-
-        System.out.println("You encountered a wild " + spawnedPokemon.getName());
-
-        Trainer me = new Trainer();
-        Fight2 fight = new Fight2(me, spawnedPokemon);
-        fight.choosePokemon();
-
-        while(!fight.turn()) {
-            System.out.println("Next turn");
-        }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
+        }
+
     }
-}
+/*
+System.out.println("You encountered a wild " + spawnedPokemon.getName());
+
+Trainer me = new Trainer();
+Fight2 fight = new Fight2(me, spawnedPokemon);
+fight.choosePokemon();
+
+while(!fight.turn()) {
+    System.out.println("Next turn");
+    */

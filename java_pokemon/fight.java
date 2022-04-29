@@ -109,6 +109,7 @@ public class fight extends Trainer {
             menu.getMap2();
             menu.selectPlace();
         } else {
+            yourPokemon2.heal();
             team.add(yourPokemon2);
             menu.getMap2();
             menu.selectPlace();
