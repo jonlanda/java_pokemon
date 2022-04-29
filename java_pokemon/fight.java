@@ -140,7 +140,7 @@ public class fight extends Trainer {
 
     public static void dieTeam() {
         if (team.size() == 0) {
-            System.out.println("Seems like your entire Team fainted!\nSee you on the next try!");
+            System.out.println(Colors.RED + "\nSeems like your entire Team fainted!\nSee you on the next try!" + Colors.RESET);
             System.exit(0);
         }
     }

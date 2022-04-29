@@ -90,15 +90,12 @@ public abstract class Pokemon {
     public void getLevelUp() {
         if (this.level == 1) {
             this.level = 2;
-            this.health = nextHealth;
             level2up();
         } else if (this.level == 2) {
             this.level = 3;
-            this.health = nextHealth;
             level3up();
         } else if (this.level == 3) {
             this.level = 4;
-            this.health = nextHealth;
             level4up();
         } else if (this.level == 4) {
             evolution();
@@ -108,26 +105,29 @@ public abstract class Pokemon {
 
     public void level2up() {
         this.level = this.nextLevel;
-        this.health = this.nextHealth;
+        this.health += 10;
+        this.maxHealth += 10;
         this.nextDmg = 1.25;
         this.nextDmg = 1.5;
-        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 2");
+        System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "2" + Colors.RESET);
     }
 
     public void level3up() {
         this.level = this.nextLevel;
-        this.health = this.nextHealth;
+        this.health += 10;
+        this.maxHealth += 10;
         this.nextDmg = 1.5;
         this.nextDmg = 1.75;
-        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 3");
+        System.out.println("Congratulations! Your "+ Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "3" + Colors.RESET);
     }
 
     public void level4up() {
         this.level = this.nextLevel;
-        this.health = this.nextHealth;
+        this.health += 10;
+        this.maxHealth += 10;
         this.nextDmg = 1.75;
         this.nextDmg = 2;
-        System.out.println("Congratulations! Your " + this.name + " leveled up! Its now level 4");
+        System.out.println("Congratulations! Your "+ Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "4" + Colors.RESET);
     }
 
     public void evolution() {
