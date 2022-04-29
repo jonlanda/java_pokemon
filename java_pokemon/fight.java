@@ -86,6 +86,7 @@ public class fight extends Trainer {
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
             System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
             diePokemon(PkmW, spawnedPokemon);
+
             attackYou(spawnedPokemon, PkmW);
         }
 
@@ -109,6 +110,7 @@ public class fight extends Trainer {
                 "Do you want to catch the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " Y/N");
         String PkmC = myPkm.nextLine();
         if (PkmC.toUpperCase() == "Y") {
+            Champ.readyForChamp();
             menu.getMap2();
             menu.selectPlace();
         } else {
