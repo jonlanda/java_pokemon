@@ -6,12 +6,6 @@ import java.util.Scanner;
 public class menu extends Spawns {
     public static void main(String[] args) {
         System.out.println("Welcome to Pokémon-Java.");
-        Pokemon p1 = new Absol("Absol", 100, 2, 4);
-        Pokemon p2 = new Morpeko("Morpeko", 100, 2, 2);
-
-        System.out.println(p2.getHealth());
-        p1.attack(1, p2);
-        System.out.println(p2.getHealth());
         Trainer me = new Trainer();
         System.out.println("Your starter Pokémon is: " + me.team.get(0).getName() + "\n");
         selectPlace();
