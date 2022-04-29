@@ -110,6 +110,7 @@ public class fight extends Trainer {
                 "Do you want to catch the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " Y/N");
         String PkmC = myPkm.nextLine();
         if (PkmC.toUpperCase() == "N") {
+            Champ.readyForChamp();
             menu.getMap2();
             menu.selectPlace();
         } else if (PkmC.toUpperCase() == "Y"){
