@@ -93,12 +93,13 @@ public class fight extends Trainer {
     public static void catchPokemon(Pokemon spawnedPokemon) {
         Scanner myPkm = new Scanner(System.in);
         System.out.println("Do you want to catch the wild " + spawnedPokemon.getName() + " Y/N");
+        Pokemon yourPokemon2 = spawnedPokemon;
         String PkmC = myPkm.nextLine();
         if (PkmC.toUpperCase() == "Y") {
-            team.add(spawnedPokemon);
             menu.getMap2();
             menu.selectPlace();
         } else {
+            team.add(yourPokemon2);
             menu.getMap2();
             menu.selectPlace();
         }
