@@ -45,6 +45,7 @@ public abstract class Pokemon {
         }
 
     }
+
     public boolean atkEne(int number, Pokemon enemy) {
         Attack attack = attacks.get(number);
         enemy.health -= attack.getDmg();
@@ -62,6 +63,4 @@ public abstract class Pokemon {
             System.out.println(" is effective against " + attack.getEffective());
         }
     }
-    
-
 }

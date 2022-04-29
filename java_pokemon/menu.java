@@ -3,7 +3,7 @@ package java_pokemon;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class menu extends Spawns{
+public class menu extends Spawns {
     public static void main(String[] args) {
         System.out.println("Welcome to Pokémon-Java.");
         Pokemon p1 = new Absol("Absol", 100, 2, 4);
@@ -73,7 +73,4 @@ public class menu extends Spawns{
         }
     }
 
-    public static void fight(Pokemon spawnedPokemon) {
-
-    }
 }
