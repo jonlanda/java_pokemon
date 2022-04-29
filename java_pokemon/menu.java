@@ -7,7 +7,7 @@ public class menu extends Spawns {
     public static void main(String[] args) {
         System.out.println("Welcome to Pokémon-Java.");
         Trainer me = new Trainer();
-        System.out.println("Your starter Pokémon is: " + me.team.get(0).getName() + "\n");
+        System.out.println("Your starter Pokémon is: " + Colors.BLUE + me.team.get(0).getName() + Colors.RESET + "\n");
         selectPlace();
     }
 

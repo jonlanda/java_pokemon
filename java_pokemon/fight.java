@@ -81,7 +81,8 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(2).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has " + team.get(PkmW).getHealth() + " Health");
+            System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + Colors.RESET + " has "
+                    + team.get(PkmW).getHealth() + " Health");
             attackYou(spawnedPokemon, PkmW);
         }
 
@@ -106,15 +107,18 @@ public class fight extends Trainer {
         Pokemon yourPokemon2 = spawnedPokemon;
         String PkmC = myPkm.nextLine();
         if (PkmC.toUpperCase() == "Y") {
+            Champ.readyForChamp();
             menu.getMap2();
             menu.selectPlace();
         } else {
             yourPokemon2.heal();
             team.add(yourPokemon2);
+            Champ.readyForChamp();
             menu.getMap2();
             menu.selectPlace();
         }
     }
+
 }
 
 // System.out.println(spawnedPokemon.getHealth());
