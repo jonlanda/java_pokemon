@@ -42,6 +42,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        choosePokemon(spawnedPokemon);
     }
 
     public static void spawnGras() {
@@ -62,6 +63,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Spoink("Spoink", 35, 2, 1);
         }
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        choosePokemon(spawnedPokemon);
     }
 
     public static void spawnForest() {
@@ -83,6 +85,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        choosePokemon(spawnedPokemon);
     }
 
     public static void spawnLake() {
@@ -103,6 +106,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        choosePokemon(spawnedPokemon);
     }
 
     public static void spawnVillage() {
@@ -124,5 +128,6 @@ public class Spawns extends fight {
         }
 
         System.out.println("You encountered a wild " + spawnedPokemon.getName());
+        choosePokemon(spawnedPokemon);
     }
 }
