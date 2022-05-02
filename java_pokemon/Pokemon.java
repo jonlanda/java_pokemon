@@ -74,7 +74,7 @@ public abstract class Pokemon {
     public boolean atkEne(int number, Pokemon enemy) {
         Attack attack = attacks.get(number);
         if (attack.getEffective() == enemy.getType()) {
-            System.out.println("It's super effective!\n");
+            System.out.println(Colors.RED + "It's super effective!\n" + Colors.RESET);
             enemy.health -= attack.getDmg() * 1.25;
             return true;
         } else {
@@ -103,13 +103,13 @@ public abstract class Pokemon {
         }
     }
 
-
     public void level2up() {
         this.health += 5;
         this.maxHealth += 5;
         this.nextDmg = 1.25;
         this.nextDmg = 1.5;
-        System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "2" + Colors.RESET);
+        System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
+                + " leveled up! Its now level " + Colors.CYAN + "2" + Colors.RESET);
     }
 
     public void level3up() {
@@ -117,7 +117,8 @@ public abstract class Pokemon {
         this.maxHealth += 5;
         this.nextDmg = 1.5;
         this.nextDmg = 1.75;
-        System.out.println("Congratulations! Your "+ Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "3" + Colors.RESET);
+        System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
+                + " leveled up! Its now level " + Colors.CYAN + "3" + Colors.RESET);
     }
 
     public void level4up() {
@@ -125,11 +126,12 @@ public abstract class Pokemon {
         this.maxHealth += 5;
         this.nextDmg = 1.75;
         this.nextDmg = 2;
-        System.out.println("Congratulations! Your "+ Colors.BLUE + this.name + Colors.RESET +" leveled up! Its now level " + Colors.CYAN + "4" + Colors.RESET);
+        System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
+                + " leveled up! Its now level " + Colors.CYAN + "4" + Colors.RESET);
     }
 
     public void evolution(int PkmW) {
-        if(fight.team.get(PkmW).getName() == "Swablu") {
+        if (fight.team.get(PkmW).getName() == "Swablu") {
             Pokemon newpoke = new Altaria("Altaria", 75, 2, 5);
             System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
@@ -223,8 +225,8 @@ public abstract class Pokemon {
         for (Attack attack : this.attacks) {
             i++;
             System.out.print(i + ")  " + attack.getAttackName());
-            System.out.print("  deals " + Colors.RED + attack.getDmg() * nextDmg + Colors.RESET +" damage,");
-            System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET +" Energy and");
+            System.out.print("  deals " + Colors.RED + attack.getDmg() * nextDmg + Colors.RESET + " damage,");
+            System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET + " Energy and");
             System.out.println(" is effective against " + attack.getEffective());
         }
     }
