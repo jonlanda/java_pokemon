@@ -6,7 +6,7 @@ public class Amoongus extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Ingrain", 5, 0, "Rock"));
-        this.attacks.add(new Attack("Spore", 15, 2, "Rock"));
+        this.attacks.add(new Attack("Spore", 15, 2, "Ground"));
         this.attacks.add(new Attack("Solar Beam", 30, 4, "Rock"));
     }
 

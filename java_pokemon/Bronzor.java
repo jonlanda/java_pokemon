@@ -5,7 +5,7 @@ public class Bronzor extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Gyro Ball", 5, 0, "Bug"));
-        this.attacks.add(new Attack("Iron Defense", 10, 2, "Bug"));
+        this.attacks.add(new Attack("Iron Defense", 10, 2, "Fairy"));
         this.attacks.add(new Attack("Confusion", 15, 4, "Bug"));
     }
 
