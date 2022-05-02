@@ -5,7 +5,7 @@ public class Bronzong extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Metal Sound", 8, 0, "Bug"));
-        this.attacks.add(new Attack("Flash Cannon", 14, 2, "Bug"));
+        this.attacks.add(new Attack("Flash Cannon", 14, 2, "Fairy"));
         this.attacks.add(new Attack("Heavy Slam", 25, 4, "Bug"));
     }
 

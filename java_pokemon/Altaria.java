@@ -5,7 +5,7 @@ public class Altaria extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Hurricane", 10, 0, "Fighting"));
-        this.attacks.add(new Attack("Fly", 20, 2, "Fighting"));
+        this.attacks.add(new Attack("Fly", 20, 2, "Grass"));
         this.attacks.add(new Attack("Sky Attack", 35, 4, "Fighting"));
     }
 
