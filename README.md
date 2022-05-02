@@ -1,5 +1,21 @@
 # Pokemon-Game made with Java
-### Fight Pokémons, Catch them and then beat the Champion of Pokémon-Java
+
+### Fight Pokémons, Catch them and then beat the Champion of Pokémon-Java!
+
+
+
+## How to execute the jar file:
+- Download Repository
+- Extract ZIP File to the Location that you want
+- Open Terminal in the 
+
+
+
+
+
+
+
+
 
 
 ## Here some information on the Game:
