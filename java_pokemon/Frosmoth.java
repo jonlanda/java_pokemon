@@ -6,8 +6,8 @@ public class Frosmoth extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Ice Wind", 5, 0, "Ground"));
-        this.attacks.add(new Attack("Aurora Beam", 8, 0, "Ground"));
-        this.attacks.add(new Attack("Blizzard", 13, 0, "Ground"));
+        this.attacks.add(new Attack("Aurora Beam", 19, 2, "Dragon"));
+        this.attacks.add(new Attack("Blizzard", 30, 4, "Ground"));
     }
 
     String getType() {

@@ -6,8 +6,8 @@ public class Zorua extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Scratch", 5, 0, "Ghost"));
-        this.attacks.add(new Attack("Knock Off", 15, 2, "Ghost"));
-        this.attacks.add(new Attack("Payback", 25, 4, "Ghost"));
+        this.attacks.add(new Attack("Knock Off", 13, 2, "Psychic"));
+        this.attacks.add(new Attack("Payback", 20, 4, "Ghost"));
     }
 
     String getType() {

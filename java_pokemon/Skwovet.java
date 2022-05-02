@@ -6,8 +6,8 @@ public class Skwovet extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Tackle", 5, 0, "Ground"));
-        this.attacks.add(new Attack("Tail Whip", 11, 2, "Ground"));
-        this.attacks.add(new Attack("Body Slam", 13, 4, "Ground"));
+        this.attacks.add(new Attack("Tail Whip", 15, 2, "Fire"));
+        this.attacks.add(new Attack("Body Slam", 24, 4, "Ground"));
     }
 
     String getType() {

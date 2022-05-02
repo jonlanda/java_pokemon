@@ -5,8 +5,8 @@ public class Croagunk extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Poison Sting", 5, 0, "Fairy"));
-        this.attacks.add(new Attack("Venoshock", 9, 2, "Fairy"));
-        this.attacks.add(new Attack("Poison Jab", 14, 4, "Fairy"));
+        this.attacks.add(new Attack("Venoshock", 18, 2, "Grass"));
+        this.attacks.add(new Attack("Poison Jab", 27, 4, "Fairy"));
     }
 
     String getType() {

@@ -6,8 +6,8 @@ public class Snom extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Powder Snow", 5, 0, "Ground"));
-        this.attacks.add(new Attack("Struggle Bug", 8, 0, "Ground"));
-        this.attacks.add(new Attack("Icicle Spear", 13, 0, "Ground"));
+        this.attacks.add(new Attack("Struggle Bug", 11, 1, "Dragon"));
+        this.attacks.add(new Attack("Icicle Spear", 18, 4, "Ground"));
     }
 
     String getType() {
