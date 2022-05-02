@@ -14,7 +14,7 @@ public class Spawns extends fight {
         } else if (starternumb == 7 || starternumb == 6) {
             spawnedPokemon = new Librava("Librava", 40, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
-            spawnedPokemon = new Dedenne("Dedenne", 70, 2, 1);
+            spawnedPokemon = new Dedenne("Dedenne", 50, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Snom("Snom", 30, 2, 1);
         }
@@ -32,7 +32,7 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Absol("Absol", 80, 2, 5);
+            spawnedPokemon = new Absol("Absol", 60, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Drilbur("Drillbur", 35, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
@@ -118,9 +118,9 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Morpeko("Morpeko", 70, 2, 5);
+            spawnedPokemon = new Morpeko("Morpeko", 50, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Absol("Absol", 80, 2, 5);
+            spawnedPokemon = new Absol("Absol", 60, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {

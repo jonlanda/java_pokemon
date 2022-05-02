@@ -108,10 +108,6 @@ public class Champ {
         fightIntroChamp(spawnedPokemon, PkmW);
         Scanner myAtk = new Scanner(System.in);
 
-        if (spawnedPokemon.getHealth() <= 0) {
-            champPokemon2(PkmW);
-        }
-
         System.out.println("Your Attacks: ");
         fight.team.get(PkmW).showAttacks();
         int AtkW = myAtk.nextInt();
