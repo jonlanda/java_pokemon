@@ -244,7 +244,7 @@ public abstract class Pokemon {
             System.out.print(i + ")  " + attack.getAttackName());
             System.out.print("  deals " + Colors.RED + attack.getDmg() * nextDmg + Colors.RESET + " damage,");
             System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET + " Energy and");
-            System.out.println(" is effective against " + attack.getEffective());
+            System.out.println(" is effective against " + attack.getEffective() + "\n");
         }
     }
 }
