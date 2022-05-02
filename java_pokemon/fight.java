@@ -53,8 +53,9 @@ public class fight extends Trainer {
         System.out.println("\n\n---------------------------------------------------------------------------\n");
         System.out.println("\nYou are fighting the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         System.out.println(" It has " + spawnedPokemon.getHealth() + " Health\n");
-        System.out.println("You have " + Colors.YELLOW + team.get(PkmW).getEnergy() + Colors.RESET +" Energy left!\n");
-        System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + Colors.RESET + " has " + Colors.GREEN + team.get(PkmW).getHealth() + Colors.RESET + " Health left!\n\n");
+        System.out.println("You have " + Colors.YELLOW + team.get(PkmW).getEnergy() + Colors.RESET + " Energy left!\n");
+        System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + Colors.RESET + " has " + Colors.GREEN
+                + team.get(PkmW).getHealth() + Colors.RESET + " Health left!\n\n");
     }
 
     public static void attackEnemy(Pokemon spawnedPokemon, int PkmW) {
@@ -66,7 +67,8 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(0).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(0).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has "+ Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN + team.get(PkmW).getHealth()
+                    + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
             attackYou(spawnedPokemon, PkmW);
         } else if (enemyAttack > 8 && enemyAttack <= 12) {
@@ -74,7 +76,8 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(1).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(1).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has "+ Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN + team.get(PkmW).getHealth()
+                    + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
             attackYou(spawnedPokemon, PkmW);
         } else {
@@ -82,7 +85,8 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(2).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN +team.get(PkmW).getHealth() + Colors.RESET +" Health");
+            System.out.println("Your " + team.get(PkmW).getName() + " has " + Colors.GREEN + team.get(PkmW).getHealth()
+                    + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
 
             attackYou(spawnedPokemon, PkmW);
@@ -104,15 +108,15 @@ public class fight extends Trainer {
 
     public static void run(Pokemon spawnedPokemon) {
         Scanner run = new Scanner(System.in);
-        System.out.println("Do you want to run away? Y/N");
+        System.out.println("Do you want to fight the wild " + spawnedPokemon.getName() + "? Y/N");
         String runA = run.nextLine();
-        switch(runA.toUpperCase()) {
-            case "Y":
+        switch (runA.toUpperCase()) {
+            case "N":
                 System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
                 menu.getMap2();
                 menu.selectPlace();
                 break;
-            case "N":
+            case "Y":
                 choosePokemon(spawnedPokemon);
                 break;
         }
@@ -123,14 +127,15 @@ public class fight extends Trainer {
         System.out.println(
                 "Do you want to catch the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " Y/N");
         String PkmC = myPkm.nextLine();
-        switch(PkmC.toUpperCase()) {
+        switch (PkmC.toUpperCase()) {
             case "Y":
                 if (team.size() >= 6) {
                     System.out.println("Sorry you cant add more Pokemons to your Team!");
                 } else {
                     spawnedPokemon.heal();
                     team.add(spawnedPokemon);
-                    System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
+                    System.out.println(
+                            "You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
                     team.get(PkmW).heal();
                     team.get(PkmW).getLevelUp(PkmW);
                 }
@@ -147,17 +152,18 @@ public class fight extends Trainer {
     }
 
     public static void diePokemon(int PkmW, Pokemon spawnedPokemon) {
-    if (team.get(PkmW).getHealth() <= 0) {
-        System.out.println("Oh no your " + team.get(PkmW).getName() + " fainted!");
-        team.remove(PkmW);
-        dieTeam();
-        choosePokemon(spawnedPokemon);
-    }
+        if (team.get(PkmW).getHealth() <= 0) {
+            System.out.println("Oh no your " + team.get(PkmW).getName() + " fainted!");
+            team.remove(PkmW);
+            dieTeam();
+            choosePokemon(spawnedPokemon);
+        }
     }
 
     public static void dieTeam() {
         if (team.size() == 0) {
-            System.out.println(Colors.RED + "\nSeems like your entire Team fainted!\nSee you on the next try!" + Colors.RESET);
+            System.out.println(
+                    Colors.RED + "\nSeems like your entire Team fainted!\nSee you on the next try!" + Colors.RESET);
             System.exit(0);
         }
     }
