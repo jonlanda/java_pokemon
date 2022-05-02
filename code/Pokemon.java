@@ -224,8 +224,9 @@ public abstract class Pokemon {
         int i = 0;
         for (Attack attack : this.attacks) {
             i++;
+            double dmg = attack.getDmg() * nextDmg;
             System.out.print(i + ")  " + attack.getAttackName());
-            System.out.print("  deals " + Colors.RED + attack.getDmg() * nextDmg + Colors.RESET + " damage,");
+            System.out.print("  deals " + Colors.RED +  String.format("%.0f", dmg) + Colors.RESET + " damage,");
             System.out.print("  costs " + Colors.YELLOW + attack.getEnergycost() + Colors.RESET + " Energy and");
             System.out.println(" is effective against " + attack.getEffective() + "\n");
         }
