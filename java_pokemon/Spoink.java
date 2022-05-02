@@ -5,8 +5,8 @@ public class Spoink extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Confusion", 5, 0, "Psychic"));
-        this.attacks.add(new Attack("Psybeam", 9, 2, "Psychic"));
-        this.attacks.add(new Attack("Facade", 14, 4, "Psychic"));
+        this.attacks.add(new Attack("Psybeam", 16, 2, "Poison"));
+        this.attacks.add(new Attack("Facade", 22, 4, "Psychic"));
     }
 
     String getType() {

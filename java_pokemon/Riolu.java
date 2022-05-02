@@ -6,8 +6,8 @@ public class Riolu extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Rock Smash", 5, 0, "Normal"));
-        this.attacks.add(new Attack("Force Palm", 9, 2, "Normal"));
-        this.attacks.add(new Attack("Vacuum ", 14, 4, "Normal"));
+        this.attacks.add(new Attack("Force Palm", 13, 2, "Ice"));
+        this.attacks.add(new Attack("Vacuum ", 20, 4, "Normal"));
     }
 
     String getType() {

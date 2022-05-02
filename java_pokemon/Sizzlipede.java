@@ -6,8 +6,8 @@ public class Sizzlipede extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Ember", 5, 0, "Grass"));
-        this.attacks.add(new Attack("Smokescreen", 8, 0, "Grass"));
-        this.attacks.add(new Attack("Fire Spin", 13, 0, "Grass"));
+        this.attacks.add(new Attack("Smokescreen", 12, 1, "Bug"));
+        this.attacks.add(new Attack("Fire Spin", 20, 3, "Grass"));
     }
 
     String getType() {
