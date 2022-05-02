@@ -15,9 +15,10 @@ public class fight extends Trainer {
 
         System.out.println("Your Attacks: ");
         team.get(PkmW).showAttacks();
-        int AtkW = myAtk.nextInt();
-        switch (AtkW) {
-            case 1:
+        System.out.println("\nR)  Run away");
+        String AtkW = myAtk.nextLine();
+        switch (AtkW.toUpperCase()) {
+            case "1":
                 team.get(PkmW).attack(0, spawnedPokemon);
                 System.out.println(
                         "The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " has "
@@ -28,7 +29,7 @@ public class fight extends Trainer {
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
-            case 2:
+            case "2":
                 team.get(PkmW).attack(1, spawnedPokemon);
                 System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " has "
                         + spawnedPokemon.getHealth()
@@ -38,7 +39,7 @@ public class fight extends Trainer {
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
-            case 3:
+            case "3":
                 team.get(PkmW).attack(2, spawnedPokemon);
                 System.out.println(
                         "The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " has "
@@ -49,6 +50,10 @@ public class fight extends Trainer {
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
+            case "R":
+                System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
+                menu.getMap2();
+                menu.selectPlace();
         }
     }
 
