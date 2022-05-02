@@ -5,17 +5,15 @@
 
 
 ## How to execute the jar file:
+- Make sure you have installed Java (if not download here -> [Java](https://java.com/de/download/manual.jsp)
 - Download Repository
 - Extract ZIP File to the Location that you want
-- Open Terminal in the 
+- Open Terminal in the java_pokemon Folder
+- Type: java -jar java_pokemon.jar
 
+And Finished!
 
-
-
-
-
-
-
+___________________________________________________________________________
 
 
 ## Here some information on the Game:
