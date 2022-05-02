@@ -13,6 +13,8 @@
 
 And Finished!
 
+Feel free to Update the Game and upload your own version of it on Github! :)
+
 ___________________________________________________________________________
 
 
