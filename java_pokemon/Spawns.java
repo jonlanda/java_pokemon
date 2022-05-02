@@ -10,7 +10,7 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
+            spawnedPokemon = new Bronzor("Bronzor", 50, 2, 1);
         } else if (starternumb == 7 || starternumb == 6) {
             spawnedPokemon = new Librava("Librava", 40, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
@@ -34,11 +34,11 @@ public class Spawns extends fight {
         if (starternumb <= 5) {
             spawnedPokemon = new Absol("Absol", 80, 2, 5);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
+            spawnedPokemon = new Drilbur("Drillbur", 35, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
-            spawnedPokemon = new Bronzor("Bronzor", 45, 2, 1);
+            spawnedPokemon = new Bronzor("Bronzor", 50, 2, 1);
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
@@ -118,9 +118,9 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Morpeko("Morpeko", 40, 2, 5);
+            spawnedPokemon = new Morpeko("Morpeko", 70, 2, 5);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Absol("Absol", 40, 2, 5);
+            spawnedPokemon = new Absol("Absol", 80, 2, 5);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
@@ -128,16 +128,16 @@ public class Spawns extends fight {
         }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
         choosePokemon(spawnedPokemon);
-        }
-
     }
+
+}
 /*
-System.out.println("You encountered a wild " + spawnedPokemon.getName());
-
-Trainer me = new Trainer();
-Fight2 fight = new Fight2(me, spawnedPokemon);
-fight.choosePokemon();
-
-while(!fight.turn()) {
-    System.out.println("Next turn");
-    */
+ * System.out.println("You encountered a wild " + spawnedPokemon.getName());
+ * 
+ * Trainer me = new Trainer();
+ * Fight2 fight = new Fight2(me, spawnedPokemon);
+ * fight.choosePokemon();
+ * 
+ * while(!fight.turn()) {
+ * System.out.println("Next turn");
+ */
