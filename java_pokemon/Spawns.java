@@ -20,7 +20,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
     public static void spawnCave() {
@@ -42,7 +42,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
     public static void spawnGras() {
@@ -63,7 +63,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Spoink("Spoink", 35, 2, 1);
         }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
     public static void spawnForest() {
@@ -85,7 +85,7 @@ public class Spawns extends fight {
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
     public static void spawnLake() {
@@ -106,7 +106,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
     public static void spawnVillage() {
@@ -127,17 +127,7 @@ public class Spawns extends fight {
             spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
         }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
-        choosePokemon(spawnedPokemon);
+        run(spawnedPokemon);
     }
 
 }
-/*
- * System.out.println("You encountered a wild " + spawnedPokemon.getName());
- * 
- * Trainer me = new Trainer();
- * Fight2 fight = new Fight2(me, spawnedPokemon);
- * fight.choosePokemon();
- * 
- * while(!fight.turn()) {
- * System.out.println("Next turn");
- */

@@ -15,7 +15,6 @@ public class fight extends Trainer {
 
         System.out.println("Your Attacks: ");
         team.get(PkmW).showAttacks();
-        System.out.println("\nR)  Run away");
         String AtkW = myAtk.nextLine();
         switch (AtkW.toUpperCase()) {
             case "1":
@@ -99,20 +98,23 @@ public class fight extends Trainer {
             System.out.println(b + ") " + team.get(i).getName());
             b++;
         }
-        run();
         int PkmW = myPkm.nextInt() - 1;
         attackYou(spawnedPokemon, PkmW);
     }
 
-    public static void run() {
+    public static void run(Pokemon spawnedPokemon) {
         Scanner run = new Scanner(System.in);
-        System.out.println("R) Run away");
+        System.out.println("Do you want to run away? Y/N");
         String runA = run.nextLine();
         switch(runA.toUpperCase()) {
-            case "R":
-            System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
-            menu.getMap2();
-            menu.selectPlace();
+            case "Y":
+                System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
+                menu.getMap2();
+                menu.selectPlace();
+                break;
+            case "N":
+                choosePokemon(spawnedPokemon);
+                break;
         }
     }
 
