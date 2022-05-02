@@ -8,7 +8,7 @@
 - Make sure you have installed Java (if not download here -> [Java](https://java.com/de/download/manual.jsp))
 - Download Repository
 - Extract ZIP File to the Location that you want
-- Open Terminal in the java_pokemon Folder
+- Open Terminal (! The Colors only work in PowerShell) in the java_pokemon Folder
 - Type: java -jar java_pokemon.jar
 
 And Finished!
