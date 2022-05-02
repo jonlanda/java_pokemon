@@ -25,7 +25,6 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -35,7 +34,6 @@ public class fight extends Trainer {
                         + spawnedPokemon.getHealth()
                         + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -46,14 +44,9 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
-            case "R":
-                System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
-                menu.getMap2();
-                menu.selectPlace();
         }
     }
 
@@ -106,8 +99,21 @@ public class fight extends Trainer {
             System.out.println(b + ") " + team.get(i).getName());
             b++;
         }
+        run();
         int PkmW = myPkm.nextInt() - 1;
         attackYou(spawnedPokemon, PkmW);
+    }
+
+    public static void run() {
+        Scanner run = new Scanner(System.in);
+        System.out.println("R) Run away");
+        String runA = run.nextLine();
+        switch(runA.toUpperCase()) {
+            case "R":
+            System.out.println(Colors.GREEN + "You got away safely\n" + Colors.RESET);
+            menu.getMap2();
+            menu.selectPlace();
+        }
     }
 
     public static void catchPokemon(Pokemon spawnedPokemon, int PkmW) {
@@ -124,11 +130,14 @@ public class fight extends Trainer {
                     team.add(spawnedPokemon);
                     System.out.println("You caught the wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "!\n\n");
                     team.get(PkmW).heal();
+                    team.get(PkmW).getLevelUp(PkmW);
                 }
                 Champ.readyForChamp();
                 menu.getMap2();
                 menu.selectPlace();
             case "N":
+                team.get(PkmW).heal();
+                team.get(PkmW).getLevelUp(PkmW);
                 Champ.readyForChamp();
                 menu.getMap2();
                 menu.selectPlace();

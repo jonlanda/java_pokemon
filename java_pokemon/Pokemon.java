@@ -104,8 +104,8 @@ public abstract class Pokemon {
     }
 
     public void level2up() {
-        this.health += 10;
-        this.maxHealth += 10;
+        this.health += 5;
+        this.maxHealth += 5;
         this.nextDmg = 1.25;
         this.nextDmg = 1.5;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
@@ -113,8 +113,8 @@ public abstract class Pokemon {
     }
 
     public void level3up() {
-        this.health += 10;
-        this.maxHealth += 10;
+        this.health += 5;
+        this.maxHealth += 5;
         this.nextDmg = 1.5;
         this.nextDmg = 1.75;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
@@ -122,8 +122,8 @@ public abstract class Pokemon {
     }
 
     public void level4up() {
-        this.health += 10;
-        this.maxHealth += 10;
+        this.health += 5;
+        this.maxHealth += 5;
         this.nextDmg = 1.75;
         this.nextDmg = 2;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
@@ -133,104 +133,87 @@ public abstract class Pokemon {
     public void evolution(int PkmW) {
         if (fight.team.get(PkmW).getName() == "Swablu") {
             Pokemon newpoke = new Altaria("Altaria", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Shellos") {
             Pokemon newpoke = new Gastrodon("Gastrodon", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Zorua") {
             Pokemon newpoke = new Zoroark("Zoroark", 90, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Cutiefly") {
             fight.team.remove(PkmW);
             Pokemon newpoke = new Ribombee("Ribombee", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Foongus") {
             fight.team.remove(PkmW);
             Pokemon newpoke = new Amoongus("Amoongus", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Bronzor") {
             Pokemon newpoke = new Bronzong("Bronzong", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Sizzlipede") {
             Pokemon newpoke = new Centiskorch("Centiskorch", 80, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Skwovet") {
             Pokemon newpoke = new Greedent("Greedent", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Riolu") {
             Pokemon newpoke = new Lucario("Lucario", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Kabuto") {
             Pokemon newpoke = new Kabutops("Kabutops", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Librava") {
             Pokemon newpoke = new Libelldra("Libelldra", 85, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Morelull") {
             Pokemon newpoke = new Shiinotic("Shiinotic", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Snom") {
             Pokemon newpoke = new Frosmoth("Frosmoth", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Spoink") {
             Pokemon newpoke = new Grumpig("Grumpig", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Croagunk") {
             Pokemon newpoke = new Toxicroak("Toxicroak", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Drilbur") {
             Pokemon newpoke = new Excadrill("Excadrill", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         } else if (fight.team.get(PkmW).getName() == "Phantump") {
             Pokemon newpoke = new Trevenant("Trevenant", 75, 2, 5);
-            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + "evolved to "
-                    + newpoke.getName() + Colors.RESET);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to " + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
         }
