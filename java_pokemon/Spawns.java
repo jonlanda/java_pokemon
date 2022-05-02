@@ -34,7 +34,7 @@ public class Spawns extends fight {
         if (starternumb <= 5) {
             spawnedPokemon = new Absol("Absol", 60, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Drilbur("Drillbur", 35, 2, 1);
+            spawnedPokemon = new Drilbur("Drilbur", 35, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
