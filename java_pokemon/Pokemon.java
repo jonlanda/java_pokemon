@@ -106,8 +106,8 @@ public abstract class Pokemon {
     public void level2up() {
         this.health += 5;
         this.maxHealth += 5;
-        this.nextDmg = 1.25;
-        this.nextDmg = 1.5;
+        this.nextDmg = 1.1;
+        this.nextEff = 1.25;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
                 + " leveled up! Its now level " + Colors.CYAN + "2" + Colors.RESET);
     }
@@ -115,8 +115,8 @@ public abstract class Pokemon {
     public void level3up() {
         this.health += 5;
         this.maxHealth += 5;
-        this.nextDmg = 1.5;
-        this.nextDmg = 1.75;
+        this.nextDmg = 1.2;
+        this.nextEff = 1.5;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
                 + " leveled up! Its now level " + Colors.CYAN + "3" + Colors.RESET);
     }
@@ -124,8 +124,8 @@ public abstract class Pokemon {
     public void level4up() {
         this.health += 5;
         this.maxHealth += 5;
-        this.nextDmg = 1.75;
-        this.nextDmg = 2;
+        this.nextDmg = 1.3;
+        this.nextEff = 1.75;
         System.out.println("Congratulations! Your " + Colors.BLUE + this.name + Colors.RESET
                 + " leveled up! Its now level " + Colors.CYAN + "4" + Colors.RESET);
     }
