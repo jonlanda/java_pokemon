@@ -6,8 +6,8 @@ public class Cutiefly extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Struggle Bug", 5, 0, "Dark"));
-        this.attacks.add(new Attack("Draining Kiss", 8, 0, "Dark"));
-        this.attacks.add(new Attack("Dazzling Gleam", 13, 0, "Dark"));
+        this.attacks.add(new Attack("Draining Kiss", 10, 1, "Psychic"));
+        this.attacks.add(new Attack("Dazzling Gleam", 20, 3, "Dark"));
     }
 
     String getType() {

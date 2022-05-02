@@ -5,8 +5,8 @@ public class Garchomp extends Pokemon {
         super(name, health, energy, level);
 
         this.attacks.add(new Attack("Outrage", 25, 0, "Steel"));
-        this.attacks.add(new Attack("Earthquake", 39, 2, "Electric"));
-        this.attacks.add(new Attack("Draco Meteor", 44, 4, "Steel"));
+        this.attacks.add(new Attack("Earthquake", 33, 2, "Electric"));
+        this.attacks.add(new Attack("Draco Meteor", 40, 4, "Dragon"));
     }
 
     String getType() {

@@ -9,11 +9,6 @@ public class Champ {
     public static int count = 0;
     public ArrayList<Pokemon> Champteam;
 
-    public Champ() {
-        this.Champteam.add(new Garchomp("Garchomp", 100, 19000, 25));
-        this.Champteam.add(new Aegislash("Aegislash", 100, 19000, 25));
-    }
-
     public static void readyForChamp() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Are you ready to fight against the Champion of Pokemon-Java? Y/N \n");
@@ -53,21 +48,21 @@ public class Champ {
     }
 
     public static void champPokemon2(int PkmW) {
-        Pokemon champPokemon2 = new Alakazam("Alakazam", 100, 19000, 25);
+        Pokemon champPokemon2 = new Alakazam("Alakazam", 85, 19000, 25);
         System.out.println(
                 "Daddy Shake sends out " + Colors.RED + champPokemon2.getName() + Colors.RESET + " to battle.");
         attackYouChamp(champPokemon2, PkmW);
     }
 
     public static void champPokemon3(int PkmW) {
-        Pokemon champPokemon3 = new Garchomp("Garchomp", 100, 19000, 25);
+        Pokemon champPokemon3 = new Garchomp("Garchomp", 125, 19000, 25);
         System.out.println(
                 "Daddy Shake sends out " + Colors.RED + champPokemon3.getName() + Colors.RESET + " to battle.");
         attackYouChamp(champPokemon3, PkmW);
     }
 
     public static void champPokemon4(int PkmW) {
-        Pokemon champPokemon4 = new Aegislash("Aegislash", 100, 19000, 25);
+        Pokemon champPokemon4 = new Aegislash("Aegislash", 120, 19000, 25);
         System.out.println(
                 "Daddy Shake sends out " + Colors.RED + champPokemon4.getName() + Colors.RESET + " to battle.");
         attackYouChamp(champPokemon4, PkmW);
