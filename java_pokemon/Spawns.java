@@ -32,7 +32,7 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Absol("Absol", 80, 2, 1);
+            spawnedPokemon = new Absol("Absol", 80, 2, 5);
         } else if (starternumb == 6 || starternumb == 7) {
             spawnedPokemon = new Drilbur("Drillbur", 40, 2, 1);
         } else if (starternumb >= 8 && starternumb <= 12) {
@@ -52,11 +52,11 @@ public class Spawns extends fight {
         int min1 = 1;
         int starternumb = (int) Math.floor(Math.random() * (max - min + 1) + min);
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
-        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
+        Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 5);
         if (starternumb <= 5) {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Togedemaru("Togedemaru", 70, 2, 1);
+            spawnedPokemon = new Togedemaru("Togedemaru", 70, 2, 5);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
@@ -118,9 +118,9 @@ public class Spawns extends fight {
         int pokenumb = (int) Math.floor(Math.random() * (max1 - min1 + 1) + min1);
         Pokemon spawnedPokemon = new Morpeko("Morpeko", 70, 2, 1);
         if (starternumb <= 5) {
-            spawnedPokemon = new Morpeko("Morpeko", 40, 2, 1);
+            spawnedPokemon = new Morpeko("Morpeko", 40, 2, 5);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Absol("Absol", 40, 2, 1);
+            spawnedPokemon = new Absol("Absol", 40, 2, 5);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {

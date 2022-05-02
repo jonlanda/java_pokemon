@@ -64,6 +64,10 @@ public class menu extends Spawns {
             case "P":
                 spawnVillage();
                 break;
+            default:
+                System.out.println("This Place does not exist!");
+                selectPlace();
+                break;
         }
     }
 
