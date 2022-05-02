@@ -1,5 +1,6 @@
 package java_pokemon;
 
+import java.security.PKCS12Attribute;
 import java.util.Scanner;
 
 public class fight extends Trainer {
@@ -23,7 +24,7 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp();
+                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -33,7 +34,7 @@ public class fight extends Trainer {
                         + spawnedPokemon.getHealth()
                         + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp();
+                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
@@ -44,7 +45,7 @@ public class fight extends Trainer {
                                 + spawnedPokemon.getHealth()
                                 + " Health left!\n");
                 if (spawnedPokemon.getHealth() <= 0) {
-                    team.get(PkmW).getLevelUp();
+                    team.get(PkmW).getLevelUp(PkmW);
                     catchPokemon(spawnedPokemon, PkmW);
                 }
                 attackEnemy(spawnedPokemon, PkmW);
