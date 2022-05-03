@@ -14,6 +14,7 @@
 And Finished!
 
 Feel free to Update the Game and upload your own version of it on Github! :)
+Also don't forget to watch this Repository to get Updates!
 
 ___________________________________________________________________________
 
