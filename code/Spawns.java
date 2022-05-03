@@ -16,7 +16,7 @@ public class Spawns extends fight {
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Dedenne("Dedenne", 50, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
-            spawnedPokemon = new Snom("Snom", 30, 2, 1);
+            spawnedPokemon = new Snom("Snom", 35, 2, 1);
         }
 
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET);
@@ -56,7 +56,7 @@ public class Spawns extends fight {
         if (starternumb <= 5) {
             spawnedPokemon = new Cutiefly("Cutiefly", 30, 2, 1);
         } else if (starternumb == 6 || starternumb == 7) {
-            spawnedPokemon = new Togedemaru("Togedemaru", 70, 2, 5);
+            spawnedPokemon = new Togedemaru("Togedemaru", 50, 2, 5);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
