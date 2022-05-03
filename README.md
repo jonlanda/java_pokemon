@@ -19,7 +19,7 @@ Also don't forget to watch this Repository to get Updates!
 ___________________________________________________________________________
 
 
-## Here some information on the Game:
+# Here some information on the Game:
 
 ## Where to find the Pokemon:
 ### Pokemon/Evolution/Type/:
