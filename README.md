@@ -65,3 +65,24 @@ ___________________________________________________________________________
 - Absol / - / Dark
 - Croagunk / Toxicroak / Poison
 - Skwovet / Greedent / Normal
+
+## Weaknesses
+### Type -> Weakness
+- Fire -> Water
+- Water -> Electric
+- Grass -> Fire
+- Flying -> Ice
+- Fighting -> Flying
+- Bug -> Steel
+- Dark -> Bug
+- Electric -> Ground
+- Normal -> Fighting
+- Ghost -> Dark
+- Psychic -> Ghost
+- Fairy -> Poison
+- Rock -> Grass
+- Ground -> Normal
+- Ice -> Rock
+- Steel -> Dragon
+- Poison -> Psychic
+- Dragon -> Fairy
