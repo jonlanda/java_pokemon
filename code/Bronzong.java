@@ -6,7 +6,7 @@ public class Bronzong extends Pokemon {
 
         this.attacks.add(new Attack("Metal Sound", 8, 0, "Bug"));
         this.attacks.add(new Attack("Flash Cannon", 14, 2, "Fairy"));
-        this.attacks.add(new Attack("Heavy Slam", 25, 4, "Bug"));
+        this.attacks.add(new Attack("Heavy Slam", 27, 4, "Bug"));
     }
 
     String getType() {

@@ -6,7 +6,7 @@ public class Toxicroak extends Pokemon {
 
         this.attacks.add(new Attack("Sludge Bomb", 12, 0, "Fairy"));
         this.attacks.add(new Attack("Belch", 23, 2, "Psychic"));
-        this.attacks.add(new Attack("Toxic", 39, 5, "Fairy"));
+        this.attacks.add(new Attack("Toxic", 39, 4, "Fairy"));
     }
 
     String getType() {
