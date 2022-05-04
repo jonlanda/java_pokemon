@@ -108,7 +108,7 @@ public class fight extends Trainer {
         int b = 1;
         for (int i = 0; i < team.size(); i++) {
             System.out.println(
-                    b + ") " + Colors.BLUE + team.get(i).getName() + "(" + team.get(i).getLevel() + ")" + Colors.RESET
+                    b + ") " + Colors.BLUE + team.get(i).getName() + "[" + team.get(i).getLevel() + "]" + Colors.RESET
                             + "(" + team.get(i).getType() + ")");
             b++;
         }

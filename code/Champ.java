@@ -33,11 +33,14 @@ public class Champ {
         System.out.println("What Pokemon do you want to use?");
         int b = 1;
         for (int i = 0; i < fight.team.size(); i++) {
-            System.out.println(b + ") " + fight.team.get(i).getName());
+            System.out.println(
+                    b + ") " + Colors.BLUE + fight.team.get(i).getName() + "[" + fight.team.get(i).getLevel() + "]"
+                            + Colors.RESET
+                            + "(" + fight.team.get(i).getType() + ")");
             b++;
+            int PkmW = myPkm.nextInt() - 1;
+            attackYouChamp(spawnedPokemon, PkmW);
         }
-        int PkmW = myPkm.nextInt() - 1;
-        attackYouChamp(spawnedPokemon, PkmW);
     }
 
     public static void champPokemon1() {
