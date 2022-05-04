@@ -58,7 +58,7 @@ public class fight extends Trainer {
                 + spawnedPokemon.getType() + ")");
         System.out.println("It has " + Colors.RED + spawnedPokemon.getHealth() + Colors.RESET + " Health\n");
         System.out.println("You have " + Colors.YELLOW + team.get(PkmW).getEnergy() + Colors.RESET + " Energy left!\n");
-        System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + "(" + team.get(PkmW).getLevel() + ")"
+        System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + "[" + team.get(PkmW).getLevel() + "]"
                 + Colors.RESET + " has " + Colors.GREEN
                 + team.get(PkmW).getHealth() + Colors.RESET + " Health left!\n\n");
     }
@@ -72,7 +72,7 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(0).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(0).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + "(" + team.get(PkmW).getLevel() + ")" + " has "
+            System.out.println("Your " + team.get(PkmW).getName() + "[" + team.get(PkmW).getLevel() + "]" + " has "
                     + Colors.GREEN + team.get(PkmW).getHealth()
                     + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
@@ -82,7 +82,7 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(1).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(1).getDmg() + " damage! \n");
-            System.out.println("Your " + team.get(PkmW).getName() + "(" + team.get(PkmW).getLevel() + ")" + " has "
+            System.out.println("Your " + team.get(PkmW).getName() + "[" + team.get(PkmW).getLevel() + "]" + " has "
                     + Colors.GREEN + team.get(PkmW).getHealth()
                     + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
@@ -92,7 +92,7 @@ public class fight extends Trainer {
             System.out.println("The wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + " uses "
                     + spawnedPokemon.attacks.get(2).getAttackName() + " and deals "
                     + spawnedPokemon.attacks.get(2).getDmg() + " damage! \n");
-            System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + "(" + team.get(PkmW).getLevel() + ")"
+            System.out.println("Your " + Colors.BLUE + team.get(PkmW).getName() + "[" + team.get(PkmW).getLevel() + "]"
                     + Colors.RESET + " has " + Colors.GREEN + team.get(PkmW).getHealth()
                     + Colors.RESET + " Health");
             diePokemon(PkmW, spawnedPokemon);
