@@ -1,4 +1,4 @@
-# Pokemon-Game made with Java (Still working on it)
+# Pokemon-Game made with Java
 
 ### Fight Pokémons, Catch them and then beat the Champion of Pokémon-Java!
 
