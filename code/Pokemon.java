@@ -239,8 +239,14 @@ public abstract class Pokemon {
                     + newpoke.getName() + Colors.RESET);
             fight.team.remove(PkmW);
             fight.team.add(newpoke);
-        }
+        } else if (fight.team.get(PkmW).getName() == "Wailmer") {
+            Pokemon newpoke = new Wailord("Wailord", 95, 2, 5);
+            System.out.println(Colors.PURPLE + "Your " + fight.team.get(PkmW).getName() + " evolved to "
+                    + newpoke.getName() + Colors.RESET);
+            fight.team.remove(PkmW);
+            fight.team.add(newpoke);
     }
+}
 
     public void showAttacks() {
         System.out.println(" Here the list of its attacks: \n");

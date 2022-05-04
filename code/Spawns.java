@@ -96,7 +96,7 @@ public class Spawns extends fight {
     }
 
     public static void spawnLake() {
-        int max = 20;
+        int max = 24;
         int min = 1;
         int max1 = 12;
         int min1 = 1;
@@ -111,6 +111,8 @@ public class Spawns extends fight {
             spawnedPokemon = new Croagunk("Croagunk", 35, 2, 1);
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
+        } else if (starternumb >= 21 && starternumb <= 24) {
+            spawnedPokemon = new Wailmer("Walimer", 45, 2, 1);
         }
         System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
                 + "(" + spawnedPokemon.getType() + ")");
