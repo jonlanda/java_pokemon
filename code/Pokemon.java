@@ -75,7 +75,7 @@ public abstract class Pokemon {
         Attack attack = attacks.get(number);
         if (attack.getEffective() == enemy.getType()) {
             System.out.println(Colors.RED + "It's super effective!\n" + Colors.RESET);
-            enemy.health -= attack.getDmg() * 1.25;
+            enemy.health -= attack.getDmg() * 1.75;
             return true;
         } else {
             enemy.health -= attack.getDmg();
