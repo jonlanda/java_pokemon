@@ -11,7 +11,7 @@ public class Champ {
     public ArrayList<Pokemon> Champteam;
 
     public static void readyForChamp() {
-        if (fight.team.size() <= 4) {
+        if (fight.team.size() < 4) {
             System.out.println("You need atleast 4 Pokémon in your team to fight the Champion.");
             menu.getMap2();
             menu.selectPlace();
