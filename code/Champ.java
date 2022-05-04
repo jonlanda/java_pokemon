@@ -11,13 +11,12 @@ public class Champ {
     public ArrayList<Pokemon> Champteam;
 
     public static void readyForChamp() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Are you ready to fight against the Champion of Pokemon-Java? Y/N \n");
-        String choice = scan.nextLine();
-        switch (choice.toUpperCase()) {
-            case "Y":
-                fightChamp();
-            case "N":
+        if (fight.team.size() <= 4) {
+            System.out.println("You need atleast 4 Pokémon in your team to fight the Champion.");
+            menu.getMap2();
+            menu.selectPlace();
+        } else {
+            fightChamp();
         }
     }
 
@@ -76,7 +75,7 @@ public class Champ {
             fight.dieTeam();
             choosePokemon(spawnedPokemon);
         }
-        }
+    }
 
     public static void attackYouChamp(Pokemon spawnedPokemon, int PkmW) {
         fightIntroChamp(spawnedPokemon, PkmW);
