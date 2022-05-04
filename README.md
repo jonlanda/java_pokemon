@@ -47,6 +47,7 @@ ___________________________________________________________________________
 - Togedemaru / - / Electric
 - Sizzlipede / Centiskorch / Fire
 - Spoink / Grumpig / Psychic
+- Grimer / Muk / Poison
 
 ### Foggy-Forest
 - Phantump / Trevenant / Ghost
