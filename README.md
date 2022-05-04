@@ -6,9 +6,9 @@
 
 ## How to execute the jar file:
 - Make sure you have installed Java (if not download here -> [Java](https://java.com/de/download/manual.jsp))
-- Download Repository
-- Extract ZIP File to the Location that you want
-- Open Terminal (! The Colors only work in PowerShell) in the java_pokemon Folder
+- Look at latest releases
+- Download .jar File in latest release
+- Open Terminal (! The Colors only work in PowerShell !) in the Folder you placed the .jar File
 - Type: java -jar java_pokemon.jar
 
 And Finished!
@@ -60,6 +60,7 @@ ___________________________________________________________________________
 - Librava / Libelldra / Dragon
 - Croagunk / Toxicroak / Poison
 - Kabuto / Kabutops / Rock
+- Wailmer / Wailord / Water
 
 ### Pongia Village
 - Morpeko / - / Electric
