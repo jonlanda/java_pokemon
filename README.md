@@ -86,3 +86,7 @@ ___________________________________________________________________________
 - Steel -> Dragon
 - Poison -> Psychic
 - Dragon -> Fairy
+
+## Records
+- First Trainer to beat the Game -> Denis Meyer
+- First Trainer to beat the Game with only 4 Pokemon -> Jon Landa  
