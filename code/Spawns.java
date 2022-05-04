@@ -19,7 +19,8 @@ public class Spawns extends fight {
             spawnedPokemon = new Snom("Snom", 35, 2, 1);
         }
 
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
@@ -41,7 +42,8 @@ public class Spawns extends fight {
             spawnedPokemon = new Bronzor("Bronzor", 50, 2, 1);
         }
 
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
@@ -59,10 +61,14 @@ public class Spawns extends fight {
             spawnedPokemon = new Togedemaru("Togedemaru", 50, 2, 5);
         } else if (starternumb >= 8 && starternumb <= 12) {
             spawnedPokemon = new Sizzlipede("Sizzlipede", 30, 2, 1);
-        } else if (starternumb >= 13 && starternumb <= 20) {
+        } else if (starternumb >= 13 && starternumb <= 16) {
             spawnedPokemon = new Spoink("Spoink", 35, 2, 1);
+        } else if ((starternumb >= 17 && starternumb <= 20)) {
+            spawnedPokemon = new Grimer("Grimer", 45, 2, 1);
         }
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
@@ -84,7 +90,8 @@ public class Spawns extends fight {
             spawnedPokemon = new Foongus("Foongus", 30, 2, 1);
         }
 
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
@@ -105,7 +112,8 @@ public class Spawns extends fight {
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Kabuto("Kabuto", 40, 2, 1);
         }
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
@@ -126,7 +134,8 @@ public class Spawns extends fight {
         } else if (starternumb >= 13 && starternumb <= 20) {
             spawnedPokemon = new Skwovet("Skwovet", 30, 2, 1);
         }
-        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET + "(" + spawnedPokemon.getType() + ")");
+        System.out.println("\n\n\n\nYou encountered a wild " + Colors.RED + spawnedPokemon.getName() + Colors.RESET
+                + "(" + spawnedPokemon.getType() + ")");
         run(spawnedPokemon);
     }
 
