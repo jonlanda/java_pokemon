@@ -12,6 +12,7 @@ public class selectPlace {
         System.out.println("(3) Field");
         System.out.println("(4) Mountain");
         System.out.println("(5) Cave");
+        System.out.println("(6)");
         int ortw = myObj.nextInt();
     }
 }
